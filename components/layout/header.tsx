@@ -54,7 +54,7 @@ export function Header() {
     >
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Logo - Accessible */}
+          {/* Logo - Accessible - Responsive */}
           <Link href="/" className="flex items-center hover:scale-105 transition-transform duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 rounded-lg" aria-label="ARZ Home Remodeling - Home">
             <Image
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-img-YR6kfZbkdkF5uYQFqCorpsvJK4opSO.jpg"
@@ -62,7 +62,8 @@ export function Header() {
               width={280}
               height={80}
               priority
-              className="h-16 lg:h-20 w-auto"
+              className="h-14 sm:h-16 md:h-18 lg:h-20 w-auto"
+              style={{ maxWidth: "280px", height: "auto" }}
             />
           </Link>
 
