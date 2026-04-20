@@ -61,7 +61,7 @@ export default function FoxCrossingBathroomRemodelingPage() {
       <FAQSchema faqs={schemaFaqs} />
       <Header />
       <main>
-        <ServiceHero title={areaData.heroTitle} subtitle={areaData.heroSubtitle} description={areaData.heroDescription} image="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?q=80&w=2574&auto=format&fit=crop" breadcrumbs={breadcrumbs} />
+        <ServiceHero title={areaData.heroTitle} description={areaData.heroDescription} backgroundImage="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?q=80&w=2574&auto=format&fit=crop" />
         <AreaIntro title={areaData.introSection.title} description={areaData.introSection.description} trustSignals={areaData.localTrustSignals} />
         <IssuesSolved title="Problems We Solve" subtitle="Common Bathroom Issues" description="We understand the frustrations that come with an outdated or dysfunctional bathroom. Here's how we address common challenges." issues={issues} />
         <Benefits title="Benefits of Bathroom Remodeling" subtitle="Why Remodel?" />
