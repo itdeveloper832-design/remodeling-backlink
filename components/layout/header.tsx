@@ -57,13 +57,13 @@ export function Header() {
           {/* Logo - Accessible - Responsive */}
           <Link href="/" className="flex items-center hover:scale-105 transition-transform duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 rounded-lg" aria-label="ARZ Home Remodeling - Home">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-img-YR6kfZbkdkF5uYQFqCorpsvJK4opSO.jpg"
+              src="/images/logo-main.png"
               alt="ARZ Home Remodeling Logo"
-              width={280}
-              height={80}
+              width={816}
+              height={280}
               priority
-              className="h-14 sm:h-16 md:h-18 lg:h-20 w-auto"
-              style={{ maxWidth: "280px", height: "auto" }}
+              sizes="(max-width: 640px) 220px, (max-width: 1024px) 300px, 360px"
+              className="h-auto w-[220px] sm:w-[260px] md:w-[300px] lg:w-[360px]"
             />
           </Link>
 

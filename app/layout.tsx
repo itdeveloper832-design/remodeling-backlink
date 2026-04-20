@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     description: 'Best bathroom remodeling contractors Chandler AZ. Affordable bathroom remodel cost, free estimates!',
     images: [
       {
-        url: `${siteConfig.url}/og-image.jpg`,
+        url: `${siteConfig.url}/images/hero-bathroom.jpg`,
         width: 1200,
         height: 630,
         alt: 'ARZ Home Remodeling - Chandler Arizona',
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: `Bathroom Remodeling Contractors Chandler AZ`,
     description: 'Best bathroom remodeling contractors Chandler AZ. Free bathroom remodel quote!',
-    images: [`${siteConfig.url}/og-image.jpg`],
+    images: [`${siteConfig.url}/images/hero-bathroom.jpg`],
   },
   alternates: {
     alternates: { canonical: siteConfig.url },
@@ -82,13 +82,12 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <head>
         {/* Critical performance optimizations - Resource Hints */}
-        <link rel="preconnect" href="https://hebbkx1anhila5yf.public.blob.vercel-storage.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://images.unsplash.com" />
         
         {/* Preload critical LCP image with fetchpriority */}
         <link rel="preload" fetchPriority="high" href="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?q=80&w=1200&auto=format&fit=crop&fm=webp" as="image" type="image/webp" />
-        <link rel="preload" fetchPriority="high" href="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-img-YR6kfZbkdkF5uYQFqCorpsvJK4opSO.jpg" as="image" type="image/jpeg" />
+        <link rel="preload" fetchPriority="high" href="/images/logo-main.png" as="image" type="image/png" />
         
         {/* Canonical URL */}
         <link rel="canonical" href={siteConfig.url} />
@@ -109,8 +108,8 @@ export default function RootLayout({
               "@id": `${siteConfig.url}/#organization`,
               "name": siteConfig.name,
               "url": siteConfig.url,
-              "logo": `${siteConfig.url}/images/logo.png`,
-              "image": `${siteConfig.url}/images/og-home.jpg`,
+              "logo": `${siteConfig.url}/images/logo-main.png`,
+              "image": `${siteConfig.url}/images/hero-bathroom.jpg`,
               "description": siteConfig.description,
               "telephone": siteConfig.phone,
               "email": siteConfig.email,
