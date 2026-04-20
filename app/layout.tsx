@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     images: [`${siteConfig.url}/og-image.jpg`],
   },
   alternates: {
-    canonical: siteConfig.url,
+    alternates: { canonical: siteConfig.url },
   },
   verification: {
     google: 'your-google-verification-code',
