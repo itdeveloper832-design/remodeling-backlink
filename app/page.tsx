@@ -97,6 +97,7 @@ const homeFaqs = [
 export default function HomePage() {
   return (
     <>
+      {/* Deployment test - Check if this appears on live site */}
       <LocalBusinessSchema />
       <FAQSchema faqs={homeFaqs} />
       <Header />
