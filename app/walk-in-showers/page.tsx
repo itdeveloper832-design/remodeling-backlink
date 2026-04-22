@@ -14,11 +14,13 @@ import { GoogleMap } from "@/components/google-map";
 import { siteConfig } from "@/lib/site-config";
 import { ServiceSchema, FAQSchema } from "@/components/seo/json-ld";
 import { serviceContent } from "@/lib/service-content-data";
+import SubServices from "@/components/sub-services";
+import { bathroomServices } from "@/lib/bathroom-services";
 
 export const metadata: Metadata = {
-  title: "Walk In Shower Installation Chandler AZ | Best",
-  description: "Best walk in shower installation Chandler AZ. Affordable walk in shower installation price, professional installation. Free walk in shower installation quote!",
-  keywords: ["walk in shower installation Chandler AZ", "walk in shower installation price Chandler AZ", "walk in shower installation cost Chandler AZ", "walk in shower installation professional Chandler AZ", "walk in shower installation best Chandler AZ", "walk in shower installation company Chandler AZ", "walk in shower installation contractor Chandler AZ", "walk in shower installation estimate Chandler AZ", "walk in shower installation quote Chandler AZ", "walk in shower installation hire Chandler AZ", "affordable walk in shower installation Chandler AZ", "walk in shower installation near me Chandler AZ"],
+  title: "Custom Walk-In Showers Chandler AZ | Installations",
+  description: "Safe & stylish walk-in showers Chandler AZ. Handicap accessible options available. Get a seamless bathroom installation today!",
+  keywords: ["walk-in showers Chandler AZ", "walk in shower installation Chandler AZ", "walk in shower installation price Chandler AZ", "walk in shower installation cost Chandler AZ", "walk in shower installation professional Chandler AZ", "walk in shower installation best Chandler AZ", "walk in shower installation company Chandler AZ", "walk in shower installation contractor Chandler AZ", "walk in shower installation estimate Chandler AZ", "walk in shower installation quote Chandler AZ", "walk in shower installation hire Chandler AZ", "affordable walk in shower installation Chandler AZ", "walk in shower installation near me Chandler AZ"],
   openGraph: {
     title: "Walk In Shower Installation Chandler AZ | Best",
     description: "Best walk in shower installation Chandler AZ. Professional installation, free quotes!",
@@ -50,6 +52,10 @@ const chandlerLocation = {
   lat: 33.3062,
   lng: -111.8413,
 };
+
+const otherServices = bathroomServices
+  .filter(s => s.href !== "/walk-in-showers")
+  .slice(0, 3);
 
 export default function WalkInShowersPage() {
   const serviceData = serviceContent["walk-in-showers"];
@@ -135,6 +141,13 @@ export default function WalkInShowersPage() {
         <ServiceCTA 
           title="Ready for a custom walk-in shower in Chandler?" 
           description="Get a free consultation with design options, material selections, and transparent pricing." 
+        />
+
+        <SubServices 
+          title="Related Services in Chandler"
+          subtitle="More Solutions"
+          description="We provide comprehensive bathroom remodeling services tailored to your needs."
+          services={otherServices}
         />
 
         <ServiceFAQ faqs={faqs} />

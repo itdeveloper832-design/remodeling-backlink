@@ -8,32 +8,32 @@ const faqs = [
   {
     question: "How long does a typical bathroom remodel take in Chandler, Arizona?",
     answer:
-      "A standard bathroom remodel typically takes 2-4 weeks depending on the scope of work. Simple updates like replacing fixtures may take just a few days, while complete gut renovations with custom tile work can take 4-6 weeks. We also offer bathroom remodel in a day near me services for quick updates. During your free consultation, we'll provide a detailed timeline specific to your project.",
+      "A standard bathroom remodel typically takes 2-4 weeks depending on the scope of work. Simple updates like replacing fixtures may take just a few days, while complete gut renovations with custom tile work can take 4-6 weeks. We also offer efficient bathroom remodeling services for quick updates. During your free consultation, we'll provide a detailed timeline specific to your project.",
   },
   {
     question: "What is the cost of bathroom remodeling in Chandler, AZ?",
     answer:
-      "Bathroom remodeling costs vary based on the size of your bathroom and the materials selected. Basic remodels start around $8,000-$15,000, mid-range renovations typically range from $15,000-$30,000, and luxury bathroom remodels can exceed $30,000. We offer bathroom remodel financing near me to make your dream bathroom affordable. We provide detailed, transparent quotes with no hidden fees.",
+      "Bathroom remodeling costs vary based on the size of your bathroom and the materials selected. Basic remodels start around $8,000-$15,000, mid-range renovations typically range from $15,000-$30,000, and luxury bathroom remodels can exceed $30,000. We offer affordable bathroom remodel financing to make your dream bathroom a reality. We provide detailed, transparent quotes with no hidden fees.",
   },
   {
-    question: "Do you offer bathroom remodel financing near me?",
+    question: "Do you offer bathroom remodel financing options?",
     answer:
-      "Yes! We offer flexible bathroom remodel with financing near me options to fit your budget. Our financing plans include low monthly payments, competitive interest rates, and quick approval. During your consultation, we'll discuss all available financing options to help make your bathroom renovation affordable.",
+      "Yes! We offer flexible bathroom remodel financing options to fit your budget. Our financing plans include low monthly payments, competitive interest rates, and quick approval. During your consultation, we'll discuss all available financing options to help make your bathroom renovation affordable.",
   },
   {
-    question: "Are you the best bathroom remodel company near me?",
+    question: "Are you the best bathroom remodel company in Chandler?",
     answer:
-      "Chandler Bathroom Remodeling is consistently rated as the best bathroom remodel company near me by our customers. We're fully licensed (ROC #123456), bonded, and insured for residential remodeling in Arizona. With 15+ years of experience and hundreds of 5-star reviews, we're the top-rated bathroom remodelers near me in Chandler and the East Valley.",
+      "Chandler Bathroom Remodeling is consistently rated as the best bathroom remodel company in the area by our customers. We're fully licensed (ROC #123456), bonded, and insured for residential remodeling in Arizona. With 15+ years of experience and hundreds of 5-star reviews, we're the top-rated bathroom remodelers in Chandler and the East Valley.",
   },
   {
-    question: "Do you offer handicap bathroom remodel contractors near me services?",
+    question: "Do you offer handicap accessible bathroom remodeling?",
     answer:
-      "Absolutely! We specialize in handicap bathroom remodel contractors near me services, creating ADA-compliant bathrooms that are both beautiful and accessible. Our accessibility modifications include walk-in tubs, grab bars, roll-in showers, comfort-height toilets, and non-slip flooring. We also offer free bathroom remodel for seniors near me assistance programs.",
+      "Absolutely! We specialize in handicap accessible bathroom remodeling, creating ADA-compliant bathrooms that are both beautiful and functional. Our accessibility modifications include walk-in tubs, grab bars, roll-in showers, comfort-height toilets, and non-slip flooring. We also offer assistance programs for seniors to help with their remodeling needs.",
   },
   {
-    question: "Do you handle commercial bathroom remodel contractors near me projects?",
+    question: "Do you handle commercial bathroom remodeling projects?",
     answer:
-      "Yes, we are experienced commercial bathroom remodel contractors near me serving Chandler and surrounding areas. We work with businesses, offices, restaurants, and commercial properties to deliver professional bathroom renovations with minimal disruption to your operations.",
+      "Yes, we are experienced commercial bathroom remodel contractors serving Chandler and surrounding areas. We work with businesses, offices, restaurants, and commercial properties to deliver professional bathroom renovations with minimal disruption to your operations.",
   },
   {
     question: "Can I stay in my home during the bathroom remodel?",
@@ -43,7 +43,7 @@ const faqs = [
   {
     question: "What areas in Arizona do you serve for bathroom remodeling?",
     answer:
-      "We primarily serve Chandler, Arizona and nearby East Valley communities including Sun Lakes, Ahwatukee, Tempe, Mesa, and South Phoenix. As the best bathroom remodelers near me, we're proud to serve homeowners throughout the region.",
+      "We primarily serve Chandler, Arizona and nearby East Valley communities including Sun Lakes, Ahwatukee, Tempe, Mesa, and South Phoenix. As the leading bathroom remodelers in the area, we're proud to serve homeowners throughout the region.",
   },
 ];
 

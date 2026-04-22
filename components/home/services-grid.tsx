@@ -37,17 +37,21 @@ export default function ServicesGrid() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mt-4 mb-6 text-foreground text-balance"
           >
-            Bathroom Remodeling Services
+            Complete Bathroom Renovation & Remodeling Solutions
           </motion.h2>
-          <motion.p
+          <motion.div
             initial={mounted ? { opacity: 0, y: 20 } : false}
             animate={mounted && isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-muted-foreground text-lg leading-relaxed"
+            className="text-muted-foreground text-lg leading-relaxed space-y-4"
           >
-            Explore our bathroom remodeling micro-services, from shower updates and bathtub work
-            to tile, lighting, vanity, sink, flooring, and plumbing improvements.
-          </motion.p>
+            <p>Our bathroom remodeling company specializes in turning outdated, cramped spaces into luxurious retreats. We offer:</p>
+            <ul className="list-disc text-left inline-block space-y-1 ml-4">
+              <li><strong>Master Bath Makeovers:</strong> Full-scale expansions and luxury upgrades.</li>
+              <li><strong>Tub-to-Shower Conversions:</strong> Safe, accessible, and modern shower installations.</li>
+              <li><strong>Custom Vanities & Tile:</strong> High-end finishes that elevate your daily routine.</li>
+            </ul>
+          </motion.div>
         </div>
 
         {/* Services Grid */}

@@ -91,7 +91,7 @@ export default function Testimonials() {
             className="text-muted-foreground text-lg leading-relaxed"
           >
             Don&apos;t just take our word for it. Here&apos;s what homeowners throughout Chandler 
-            and the surrounding areas have to say about their experience with the best bathroom remodelers near me.
+            and the surrounding areas have to say about their experience with our expert bathroom remodeling team.
           </motion.p>
         </div>
 

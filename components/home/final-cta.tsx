@@ -34,7 +34,7 @@ export default function FinalCTA() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="font-serif text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold mt-4 mb-6 text-primary-foreground text-balance"
           >
-            Ready to Create Your Dream Bathroom?
+            Ready for Your Bathroom Remodel in Chandler, AZ?
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -42,8 +42,7 @@ export default function FinalCTA() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-primary-foreground/80 text-lg lg:text-xl leading-relaxed mb-10 max-w-2xl mx-auto"
           >
-            Schedule your free in-home consultation today and take the first step toward 
-            the bathroom you&apos;ve always wanted.
+            Don&apos;t wait any longer to build the oasis you deserve. As the premier choice for bathroom remodeling Chandler AZ, we guarantee transparent pricing, zero hidden fees, and an on-time completion standard. Schedule your free in-home consultation and let our remodeling experts bring your vision to life.
           </motion.p>
 
           <motion.div
@@ -58,7 +57,7 @@ export default function FinalCTA() {
               className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 text-base px-8 py-6 group"
             >
               <Link href="/contact">
-                Schedule Free Consultation
+                Schedule Your Free Quote
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>
@@ -70,7 +69,7 @@ export default function FinalCTA() {
             >
               <a href={`tel:${siteConfig.phone}`}>
                 <Phone className="mr-2 w-4 h-4" />
-                {siteConfig.phone}
+                Call Now: {siteConfig.phone}
               </a>
             </Button>
           </motion.div>

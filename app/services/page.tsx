@@ -7,9 +7,9 @@ import { bathroomServices } from "@/lib/bathroom-services";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
-  title: "Bathroom Remodel Services Chandler AZ | All",
-  description: "Complete bathroom remodel services Chandler AZ. Bathroom installation services, bathroom repair services, bathroom upgrade cost. Free estimates!",
-  keywords: ["bathroom remodel services chandler az", "bathroom installation services chandler az", "bathroom repair services chandler az", "bathroom upgrade cost chandler az", "bathroom redesign services chandler az", "bathroom remodeling services near me in chandler az", "professional bathroom remodel services chandler az"],
+  title: "Custom Bathroom Remodeling Services in Chandler",
+  description: "Professional bathroom remodeling services. From tub conversions to full master bath builds in Chandler, AZ. Schedule your free quote!",
+  keywords: ["bathroom remodeling services", "bathroom remodel services chandler az", "bathroom installation services chandler az", "bathroom repair services chandler az", "bathroom upgrade cost chandler az", "bathroom redesign services chandler az", "professional bathroom remodel services chandler az"],
   openGraph: {
     title: "Bathroom Remodel Services Chandler AZ | All",
     description: "Complete bathroom remodel services Chandler AZ. Professional bathroom installation services!",
@@ -40,7 +40,7 @@ export default function ServicesPage() {
               <p className="text-muted-foreground text-lg leading-relaxed mb-8">
                 Complete bathroom remodel services from licensed bathroom remodeling contractors in Chandler AZ. 
                 Professional bathroom installation services, bathroom repair services, bathroom upgrade solutions, 
-                and bathroom redesign services. Affordable bathroom remodeling services near me with free estimates.
+                and bathroom redesign services. Affordable bathroom remodeling services with free in-home estimates.
               </p>
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
                 <Link href="/contact">Get Free Estimate</Link>

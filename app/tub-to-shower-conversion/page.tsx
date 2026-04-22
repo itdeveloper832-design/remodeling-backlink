@@ -14,11 +14,13 @@ import { GoogleMap } from "@/components/google-map";
 import { siteConfig } from "@/lib/site-config";
 import { ServiceSchema, FAQSchema } from "@/components/seo/json-ld";
 import { serviceContent } from "@/lib/service-content-data";
+import SubServices from "@/components/sub-services";
+import { bathroomServices } from "@/lib/bathroom-services";
 
 export const metadata: Metadata = {
-  title: "Tub to Shower Conversion Chandler AZ | Best Price",
-  description: "Best tub to shower conversion Chandler AZ. Affordable bathtub to shower conversion cost, professional installation. Free tub to shower conversion quote!",
-  keywords: ["tub to shower conversion Chandler AZ", "tub to shower conversion price Chandler AZ", "tub to shower conversion cost Chandler AZ", "best tub to shower conversion Chandler AZ", "affordable tub to shower conversion Chandler AZ", "tub to shower conversion quote Chandler AZ", "tub to shower conversion estimate Chandler AZ", "tub to shower conversion contractor Chandler AZ", "bathtub to shower conversion cost Chandler AZ", "bathtub to shower conversion price Chandler AZ", "bathtub to shower conversion professional Chandler AZ", "hire tub to shower conversion Chandler AZ"],
+  title: "Tub to Shower Conversion Chandler AZ | Safe & Fast",
+  description: "Expert tub to shower conversion Chandler AZ. Improve safety and style with a modern walk-in shower. Request your free estimate today!",
+  keywords: ["tub to shower conversion Chandler", "tub to shower conversion price Chandler AZ", "tub to shower conversion cost Chandler AZ", "best tub to shower conversion Chandler AZ", "affordable tub to shower conversion Chandler AZ", "tub to shower conversion quote Chandler AZ", "tub to shower conversion estimate Chandler AZ", "tub to shower conversion contractor Chandler AZ", "bathtub to shower conversion cost Chandler AZ", "bathtub to shower conversion price Chandler AZ", "bathtub to shower conversion professional Chandler AZ", "hire tub to shower conversion Chandler AZ"],
   openGraph: {
     title: "Tub to Shower Conversion Chandler AZ | Best Price",
     description: "Best tub to shower conversion Chandler AZ. Affordable bathtub to shower conversion cost!",
@@ -50,6 +52,10 @@ const chandlerLocation = {
   lat: 33.3062,
   lng: -111.8413,
 };
+
+const otherServices = bathroomServices
+  .filter(s => s.href !== "/tub-to-shower-conversion")
+  .slice(0, 3);
 
 export default function TubToShowerConversionPage() {
   const serviceData = serviceContent["tub-to-shower-conversion"];
@@ -135,6 +141,13 @@ export default function TubToShowerConversionPage() {
         <ServiceCTA 
           title="Ready to convert your tub to a shower in Chandler?" 
           description="Get a free consultation and see how a walk-in shower can transform your bathroom." 
+        />
+
+        <SubServices 
+          title="Explore Other Services"
+          subtitle="More Solutions"
+          description="We provide a full suite of bathroom remodeling services in Chandler."
+          services={otherServices}
         />
 
         <ServiceFAQ faqs={faqs} />

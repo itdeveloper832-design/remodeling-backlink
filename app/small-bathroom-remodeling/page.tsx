@@ -14,11 +14,13 @@ import { GoogleMap } from "@/components/google-map";
 import { siteConfig } from "@/lib/site-config";
 import { ServiceSchema, FAQSchema } from "@/components/seo/json-ld";
 import { serviceContent } from "@/lib/service-content-data";
+import SubServices from "@/components/sub-services";
+import { bathroomServices } from "@/lib/bathroom-services";
 
 export const metadata: Metadata = {
-  title: "Small Bathroom Remodel Cost Chandler AZ | Expert",
-  description: "Affordable small bathroom remodel cost Chandler AZ. Professional small bathroom remodeling services with space-saving designs. Free estimates!",
-  keywords: ["small bathroom remodel cost chandler az", "affordable small bathroom remodel cost chandler az", "best small bathroom remodel cost chandler az", "local small bathroom remodel cost chandler az", "professional small bathroom remodel cost chandler az", "small bathroom remodeling chandler", "space-saving bathroom design"],
+  title: "Small Bathroom Remodel Chandler AZ | Maximize Space",
+  description: "Expert small bathroom remodel Chandler AZ. We maximize space & aesthetic with modern vanity and tile upgrades. Get your free estimate!",
+  keywords: ["small bathroom remodel Chandler", "small bathroom remodel cost chandler az", "affordable small bathroom remodel cost chandler az", "best small bathroom remodel cost chandler az", "local small bathroom remodel cost chandler az", "professional small bathroom remodel cost chandler az", "small bathroom remodeling chandler", "space-saving bathroom design"],
   openGraph: {
     title: "Small Bathroom Remodel Cost Chandler AZ | Expert",
     description: "Affordable small bathroom remodel cost Chandler AZ. Professional small bathroom remodeling services.",
@@ -47,6 +49,10 @@ export const metadata: Metadata = {
 const faqs = serviceContent["small-bathroom-remodeling"].faqs;
 
 const chandlerLocation = { lat: 33.3062, lng: -111.8413 };
+
+const otherServices = bathroomServices
+  .filter(s => s.href !== "/small-bathroom-remodeling")
+  .slice(0, 3);
 
 export default function SmallBathroomRemodelingPage() {
   const smallBathData = serviceContent["small-bathroom-remodeling"];
@@ -95,6 +101,14 @@ export default function SmallBathroomRemodelingPage() {
           tips={smallBathData.tips}
         />
         <ServiceCTA title="Ready for small bathroom remodeling in Chandler?" description="Get expert space-maximizing design, smart storage solutions, and professional installation for your small bathroom." />
+
+        <SubServices 
+          title="Other Space-Saving Solutions"
+          subtitle="More Upgrades"
+          description="From vanity updates to custom tile, we can maximize every inch of your bathroom."
+          services={otherServices}
+        />
+
         <ServiceFAQ faqs={faqs} />
         <Testimonials />
         <ContactSection />

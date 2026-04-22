@@ -14,11 +14,13 @@ import { GoogleMap } from "@/components/google-map";
 import { siteConfig } from "@/lib/site-config";
 import { ServiceSchema, FAQSchema } from "@/components/seo/json-ld";
 import { serviceContent } from "@/lib/service-content-data";
+import SubServices from "@/components/sub-services";
+import { bathroomServices } from "@/lib/bathroom-services";
 
 export const metadata: Metadata = {
-  title: "Bathtub to Shower Conversion Chandler AZ | Best",
-  description: "Best bathtub to shower conversion Chandler AZ. Affordable bathtub to shower conversion cost, professional bathtub remodeling services. Free estimates!",
-  keywords: ["bathtub to shower conversion Chandler AZ", "bathtub to shower conversion cost Chandler AZ", "bathtub to shower conversion price Chandler AZ", "bathtub to shower conversion professional Chandler AZ", "affordable bathtub to shower conversion Chandler AZ", "bathtub to shower conversion estimate Chandler AZ", "bathtub to shower conversion near me Chandler AZ", "bathtub to shower conversion services Chandler AZ", "hire bathtub to shower conversion Chandler AZ", "company bathtub to shower conversion Chandler AZ"],
+  title: "Bathtub Remodeling Chandler AZ | Soaking Tubs",
+  description: "Professional bathtub remodeling Chandler AZ. Upgrade to a luxury soaking tub or freestanding bath. Browse our portfolio and get a quote!",
+  keywords: ["bathtub remodeling Chandler", "bathtub to shower conversion Chandler AZ", "bathtub to shower conversion cost Chandler AZ", "bathtub to shower conversion price Chandler AZ", "bathtub to shower conversion professional Chandler AZ", "affordable bathtub to shower conversion Chandler AZ", "bathtub to shower conversion estimate Chandler AZ", "bathtub to shower conversion near me Chandler AZ", "bathtub to shower conversion services Chandler AZ", "hire bathtub to shower conversion Chandler AZ", "company bathtub to shower conversion Chandler AZ"],
   openGraph: {
     title: "Bathtub to Shower Conversion Chandler AZ | Best",
     description: "Best bathtub to shower conversion Chandler AZ. Affordable bathtub remodeling services!",
@@ -50,6 +52,10 @@ const chandlerLocation = {
   lat: 33.3062,
   lng: -111.8413,
 };
+
+const otherServices = bathroomServices
+  .filter(s => s.href !== "/bathtub-remodeling")
+  .slice(0, 3);
 
 export default function BathtubRemodelingPage() {
   const serviceData = serviceContent["bathtub-remodeling"];
@@ -135,6 +141,13 @@ export default function BathtubRemodelingPage() {
         <ServiceCTA 
           title="Ready for professional bathtub remodeling in Chandler?" 
           description="Get expert design consultation, quality materials, and professional installation for your dream bathtub." 
+        />
+
+        <SubServices 
+          title="Other Bathroom Services in Chandler"
+          subtitle="More Options"
+          description="Looking for something else? We offer a variety of bathroom remodeling solutions."
+          services={otherServices}
         />
 
         <ServiceFAQ faqs={faqs} />

@@ -14,11 +14,13 @@ import { GoogleMap } from "@/components/google-map";
 import { siteConfig } from "@/lib/site-config";
 import { ServiceSchema, FAQSchema } from "@/components/seo/json-ld";
 import { serviceContent } from "@/lib/service-content-data";
+import SubServices from "@/components/sub-services";
+import { bathroomServices } from "@/lib/bathroom-services";
 
 export const metadata: Metadata = {
-  title: "Bathroom Tile Installation Chandler AZ | Expert",
-  description: "Professional bathroom tile installation in Chandler, AZ. Shower tile, floor tile, and backsplash with waterproofing. Free estimates available!",
-  keywords: ["bathroom tile installation chandler az", "shower tile installation chandler", "bathroom floor tile", "tile contractors chandler", "bathroom backsplash installation", "waterproof tile installation"],
+  title: "Bathroom Tile Installation Chandler AZ | Floor & Wall",
+  description: "Premium bathroom tile installation Chandler AZ. Custom ceramic, porcelain, & marble flooring and shower walls. Get a free quote!",
+  keywords: ["bathroom tile installation Chandler", "bathroom tile installation chandler az", "shower tile installation chandler", "bathroom floor tile", "tile contractors chandler", "bathroom backsplash installation", "waterproof tile installation"],
   openGraph: {
     title: "Bathroom Tile Installation Chandler AZ",
     description: "Professional bathroom tile installation in Chandler with shower tile, floor tile and backsplash work.",
@@ -47,6 +49,10 @@ export const metadata: Metadata = {
 const faqs = serviceContent["bathroom-tile-installation"].faqs;
 
 const chandlerLocation = { lat: 33.3062, lng: -111.8413 };
+
+const otherServices = bathroomServices
+  .filter(s => s.href !== "/bathroom-tile-installation")
+  .slice(0, 3);
 
 export default function BathroomTileInstallationPage() {
   const tileData = serviceContent["bathroom-tile-installation"];
@@ -94,6 +100,14 @@ export default function BathroomTileInstallationPage() {
           tips={tileData.tips}
         />
         <ServiceCTA title="Ready for professional bathroom tile installation?" description="Get expert design consultation, quality materials, and precision installation for beautiful bathroom tile work." />
+
+        <SubServices 
+          title="Explore More Bathroom Upgrades"
+          subtitle="Complete Solutions"
+          description="Beyond tile, we offer full-service bathroom remodeling to transform your home."
+          services={otherServices}
+        />
+
         <ServiceFAQ faqs={faqs} />
         <Testimonials />
         <ContactSection />

@@ -2,8 +2,8 @@ import { Metadata } from "next"
 import { siteConfig } from "@/lib/site-config"
 
 export const metadata: Metadata = {
-  title: "Bathroom Remodeling Photos Chandler AZ | Gallery",
-  description: "View bathroom remodeling photos in Chandler, AZ. Before and after gallery of shower remodels, bathtub renovations, and luxury bathroom projects.",
+  title: "Bathroom Remodel Portfolio Chandler AZ | Past Work",
+  description: "View our stunning bathroom remodel portfolio in Chandler AZ. See recent master bath and shower transformations. Get inspired!",
   openGraph: {
     title: "Bathroom Remodeling Photos Chandler AZ | Gallery",
     description: "View bathroom remodeling before and after photos in Chandler, AZ.",

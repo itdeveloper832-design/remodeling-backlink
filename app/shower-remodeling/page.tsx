@@ -13,11 +13,13 @@ import ContactSection from "@/components/home/contact-section";
 import { siteConfig } from "@/lib/site-config";
 import { ServiceSchema, FAQSchema } from "@/components/seo/json-ld";
 import { serviceContent } from "@/lib/service-content-data";
+import SubServices from "@/components/sub-services";
+import { bathroomServices } from "@/lib/bathroom-services";
 
 export const metadata: Metadata = {
-  title: "Shower Remodel Chandler AZ | Best Services",
-  description: "Best shower remodel services Chandler AZ. Affordable shower remodel cost, professional shower remodel contractor. Free shower remodel estimate!",
-  keywords: ["shower remodel services Chandler AZ", "shower remodel Chandler AZ", "shower remodel cost Chandler AZ", "shower remodel price Chandler AZ", "shower remodel estimate Chandler AZ", "shower remodel quote Chandler AZ", "shower remodel contractor Chandler AZ", "shower remodel company Chandler AZ", "affordable shower remodel Chandler AZ", "best shower remodel Chandler AZ", "professional shower remodel Chandler AZ", "shower remodel near me Chandler AZ", "hire shower remodel Chandler AZ", "shower remodel installation Chandler AZ"],
+  title: "Custom Shower Remodeling Chandler AZ | Fast Install",
+  description: "Premium shower remodeling Chandler AZ. Walk-in showers, custom tiling, and glass enclosures built to last. Call for a free consultation!",
+  keywords: ["shower remodeling Chandler", "shower remodel services Chandler AZ", "shower remodel Chandler AZ", "shower remodel cost Chandler AZ", "shower remodel price Chandler AZ", "shower remodel estimate Chandler AZ", "shower remodel quote Chandler AZ", "shower remodel contractor Chandler AZ", "shower remodel company Chandler AZ", "affordable shower remodel Chandler AZ", "best shower remodel Chandler AZ", "professional shower remodel Chandler AZ", "shower remodel near me Chandler AZ", "hire shower remodel Chandler AZ", "shower remodel installation Chandler AZ"],
   openGraph: {
     title: "Shower Remodel Chandler AZ | Best Services",
     description: "Best shower remodel services Chandler AZ. Affordable shower remodel, free quotes!",
@@ -45,10 +47,9 @@ export const metadata: Metadata = {
 
 const faqs = serviceContent["shower-remodeling"].faqs;
 
-const chandlerLocation = {
-  lat: 33.3062,
-  lng: -111.8413,
-};
+const otherServices = bathroomServices
+  .filter(s => s.href !== "/shower-remodeling")
+  .slice(0, 3);
 
 export default function ShowerRemodelingPage() {
   const showerData = serviceContent["shower-remodeling"];
@@ -136,6 +137,13 @@ export default function ShowerRemodelingPage() {
         <ServiceCTA 
           title="Ready for a Chandler shower remodel that stays watertight?" 
           description="Get a custom shower plan, tile selections, and a clean installation schedule tailored to your home." 
+        />
+
+        <SubServices 
+          title="Explore Other Bathroom Services"
+          subtitle="More Solutions"
+          description="We offer a full range of bathroom remodeling services beyond just showers."
+          services={otherServices}
         />
 
         <ServiceFAQ faqs={faqs} />

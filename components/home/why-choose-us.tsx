@@ -67,7 +67,7 @@ export default function WhyChooseUs() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mt-4 mb-6 text-foreground text-balance"
           >
-            The Difference is in the Details
+            Trusted Bathroom Remodeling Services in Chandler, AZ
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -75,8 +75,7 @@ export default function WhyChooseUs() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-muted-foreground text-lg leading-relaxed"
           >
-            Discover why Chandler homeowners trust us as the best bathroom remodel company near me. 
-            We combine artisan skill with modern efficiency to deliver exceptional results.
+            When searching for a reliable team, you deserve contractors who prioritize craftsmanship, transparency, and timelines. We proudly serve homeowners throughout Chandler and the East Valley, delivering custom designs tailored to your aesthetic and budget. From obtaining local permits to the final quality inspection, we handle every detail.
           </motion.p>
         </div>
 

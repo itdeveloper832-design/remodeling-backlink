@@ -8,9 +8,9 @@ import { Phone, Mail, MapPin, Clock, Star } from "lucide-react"
 import { BreadcrumbSchema, FAQSchema } from "@/components/seo/json-ld"
 
 export const metadata: Metadata = {
-  title: "Bathroom Contractor Chandler AZ | Free Quote",
-  description: "Best bathroom contractor Chandler AZ. Hire bathroom contractor, affordable bathroom contractor price. Free bathroom contractor estimate!",
-  keywords: ["bathroom contractor Chandler AZ", "bathroom contractor price Chandler AZ", "bathroom contractor quote Chandler AZ", "bathroom contractor estimate Chandler AZ", "bathroom contractor professional Chandler AZ", "bathroom contractor best Chandler AZ", "bathroom contractor near me Chandler AZ", "bathroom contractor affordable Chandler AZ", "hire bathroom contractor Chandler AZ", "bathroom contractor cost Chandler AZ", "bathroom contractor company Chandler AZ", "bathroom contractor installation Chandler AZ"],
+  title: "Get a Free Bathroom Remodel Quote Chandler AZ",
+  description: "Request your free bathroom remodel quote Chandler AZ. Our licensed contractors are ready to discuss your renovation. Call now!",
+  keywords: ["bathroom remodel quote Chandler", "bathroom contractor Chandler AZ", "bathroom contractor price Chandler AZ", "bathroom contractor quote Chandler AZ", "bathroom contractor estimate Chandler AZ", "bathroom contractor professional Chandler AZ", "bathroom contractor best Chandler AZ", "bathroom contractor near me Chandler AZ", "bathroom contractor affordable Chandler AZ", "hire bathroom contractor Chandler AZ", "bathroom contractor cost Chandler AZ", "bathroom contractor company Chandler AZ", "bathroom contractor installation Chandler AZ"],
   openGraph: {
     title: "Bathroom Contractor Chandler AZ | Free Quote",
     description: "Best bathroom contractor Chandler AZ. Hire bathroom contractor, free estimate!",

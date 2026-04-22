@@ -43,7 +43,7 @@ export default function AboutPreview() {
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
               <Image
                 src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=75&w=800&auto=format&fit=crop&fm=webp"
-                alt="Chandler Bathroom Remodeling team at work - best bathroom remodel company near me"
+                alt="Experienced bathroom remodeling team at work in Chandler AZ"
                 fill
                 className="object-cover"
                 quality={75}
@@ -86,7 +86,7 @@ export default function AboutPreview() {
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
               Chandler Bathroom Remodeling was founded with a simple mission: to transform ordinary 
               spaces into extraordinary ones. What started as a small family business has 
-              grown into one of Chandler&apos;s most trusted remodeling companies and the best bathroom remodelers near me.
+              grown into one of Chandler&apos;s most trusted remodeling companies and the premier choice for bathroom remodeling.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               Our team of skilled designers and craftsmen brings together creativity, 

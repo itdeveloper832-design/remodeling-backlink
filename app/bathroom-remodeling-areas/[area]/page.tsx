@@ -4,7 +4,6 @@ import { useParams, notFound } from "next/navigation";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import ServiceHero from "@/components/service-hero";
-
 import ProcessSection from "@/components/home/process-section";
 import Testimonials from "@/components/home/testimonials";
 import ServiceCTA from "@/components/service-cta";
@@ -13,10 +12,8 @@ import AreaBenefits from "@/components/area-benefits";
 import CustomFAQ from "@/components/custom-faq";
 import { ServiceSchema, FAQSchema } from "@/components/seo/json-ld";
 import { siteConfig } from "@/lib/site-config";
-import { getAreaData, getAllAreaSlugs } from "@/lib/bathroom-remodeling-areas";
-
-
-
+import { getAreaData } from "@/lib/bathroom-remodeling-areas";
+import AreaInterlinking from "@/components/area-interlinking";
 
 export default function AreaPage() {
   const params = useParams();
@@ -27,12 +24,6 @@ export default function AreaPage() {
   if (!areaData) {
     notFound();
   }
-
-  const breadcrumbs = [
-    { name: "Home", url: siteConfig.url },
-    { name: "Bathroom Remodeling", url: `${siteConfig.url}/bathroom-remodeling` },
-    { name: areaData.areaName, url: `${siteConfig.url}/bathroom-remodeling-areas/${areaSlug}` },
-  ];
 
   // Convert area FAQs to match the FAQSchema format
   const schemaFaqs = areaData.areaFaqs.map((faq) => ({
@@ -68,6 +59,7 @@ export default function AreaPage() {
           description={`Get answers to questions about our bathroom remodeling services specifically for ${areaData.areaName} homeowners.`}
           faqs={areaData.areaFaqs}
         />
+        <AreaInterlinking />
         <ServiceCTA />
       </main>
       <Footer />

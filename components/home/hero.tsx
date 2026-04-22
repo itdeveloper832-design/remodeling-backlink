@@ -18,7 +18,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <Image
           src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?q=80&w=1200&auto=format&fit=crop&fm=webp"
-          alt="Luxury bathroom remodel in Chandler, Arizona - best bathroom remodelers near me"
+          alt="Modern master bathroom remodeling project in Chandler AZ"
           fill
           className="object-cover"
           priority={true}

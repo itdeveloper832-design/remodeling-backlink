@@ -14,14 +14,7 @@ import CustomFAQ from "@/components/custom-faq";
 import { ServiceSchema, FAQSchema } from "@/components/seo/json-ld";
 import { siteConfig } from "@/lib/site-config";
 import { bathroomRemodelingAreas } from "@/lib/bathroom-remodeling-areas";
-import {
-  Grid3X3,
-  TrendingUp,
-  DollarSign,
-  Clock,
-  Shield,
-  Sparkles,
-} from "lucide-react";
+import AreaInterlinking from "@/components/area-interlinking";
 
 export const metadata: Metadata = {
   title: "Bathroom Remodeling Sun Lakes Chandler AZ",
@@ -129,6 +122,7 @@ export default function SunLakesBathroomRemodelingPage() {
           description={`Get answers to questions about our bathroom remodeling services specifically for ${areaData.areaName} homeowners.`}
           faqs={areaData.areaFaqs}
         />
+        <AreaInterlinking />
         <ServiceCTA
           title={`Ready to Transform Your ${areaData.areaName} Bathroom?`}
           description={`Schedule your free in-home consultation today. Our design experts will help you create the perfect bathroom for your ${areaData.areaName} home and budget.`}

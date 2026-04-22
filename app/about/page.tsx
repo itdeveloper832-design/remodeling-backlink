@@ -9,9 +9,9 @@ import { Award, Users, Clock, Shield, CheckCircle2, ArrowRight, Phone, Pencil, H
 import { BreadcrumbSchema, FAQSchema } from "@/components/seo/json-ld"
 
 export const metadata: Metadata = {
-  title: "Bathroom Renovation Contractor Chandler AZ | Best",
-  description: "Best bathroom renovation contractor Chandler AZ. Professional bathroom renovation services, affordable bathroom renovation cost. 15+ years experience!",
-  keywords: ["bathroom renovation Chandler AZ", "bathroom renovation contractor Chandler AZ", "bathroom renovation cost Chandler AZ", "bathroom renovation price Chandler AZ", "bathroom renovation near me Chandler AZ", "bathroom renovation professional Chandler AZ", "bathroom renovation hire Chandler AZ", "bathroom renovation company Chandler AZ", "bathroom renovation services Chandler AZ", "best bathroom renovation Chandler AZ", "bathroom renovation quote Chandler AZ", "bathroom renovation estimate Chandler AZ"],
+  title: "Trusted Bathroom Remodelers Chandler AZ | ARZ",
+  description: "Local, licensed bathroom remodelers in Chandler AZ. Over 15 years building luxury baths with guaranteed satisfaction. Read our story!",
+  keywords: ["bathroom remodelers Chandler", "bathroom renovation Chandler AZ", "bathroom renovation contractor Chandler AZ", "bathroom renovation cost Chandler AZ", "bathroom renovation price Chandler AZ", "bathroom renovation near me Chandler AZ", "bathroom renovation professional Chandler AZ", "bathroom renovation hire Chandler AZ", "bathroom renovation company Chandler AZ", "bathroom renovation services Chandler AZ", "best bathroom renovation Chandler AZ", "bathroom renovation quote Chandler AZ", "bathroom renovation estimate Chandler AZ"],
   openGraph: {
     title: "Bathroom Renovation Contractor Chandler AZ | Best",
     description: "Best bathroom renovation contractor Chandler AZ. Professional bathroom renovation!",

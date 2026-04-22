@@ -27,9 +27,9 @@ export default function ServiceAreas() {
               Proudly Serving Chandler & Surrounding Communities
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Based in Chandler, Arizona, we are the best bathroom remodel company near me, providing premium bathroom remodeling 
-              services throughout the East Valley. Our team is committed to delivering 
-              exceptional craftsmanship to homeowners searching for bathroom remodelers near me.
+              Based in Chandler, Arizona, we are the premier bathroom remodel company, providing premium bathroom remodeling 
+              services throughout the East Valley. Our team brings decades of combined experience and 
+              exceptional craftsmanship to homeowners searching for professional bathroom remodelers.
             </p>
 
             {/* Service Areas Grid */}

@@ -122,7 +122,7 @@ export default function GalleryPreview() {
               className="text-muted-foreground text-lg"
             >
               Hover over each image to see the stunning transformation. These are real projects 
-              completed for homeowners in Chandler and surrounding areas by the best bathroom remodelers near me.
+              completed for homeowners in Chandler and surrounding areas by our professional bathroom remodeling team.
             </motion.p>
           </div>
           <motion.div

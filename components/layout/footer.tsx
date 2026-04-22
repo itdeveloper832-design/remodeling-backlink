@@ -20,7 +20,7 @@ export function Footer() {
             </Link>
             <p className="text-background/70 text-sm leading-relaxed mb-6">
               Premier bathroom remodeling services in Chandler, Arizona. 
-              The best bathroom remodel company near me, transforming homes with luxury designs and exceptional craftsmanship since 2008.
+              The premier bathroom remodel company in Chandler, transforming homes with luxury designs and exceptional craftsmanship since 2008.
             </p>
             <div className="flex gap-3">
               <a
@@ -59,34 +59,42 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  href="/bathroom-remodeling"
+                  href="/services"
                   className="text-background/70 hover:text-primary transition-colors text-sm"
                 >
-                  Bathroom Remodeling
+                  All Services
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/bathroom-remodeling#shower-remodeling"
+                  href="/master-bathroom-remodel"
                   className="text-background/70 hover:text-primary transition-colors text-sm"
                 >
-                  Shower Remodeling
+                  Master Bathroom Remodel
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/bathroom-remodeling#bathtub-installation"
+                  href="/handicap-accessible-bathroom-chandler"
                   className="text-background/70 hover:text-primary transition-colors text-sm"
                 >
-                  Bathtub Installation
+                  Accessible Bathrooms
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/bathroom-remodeling#walk-in-shower-installation"
+                  href="/bathroom-remodeling-cost-chandler-az"
                   className="text-background/70 hover:text-primary transition-colors text-sm"
                 >
-                  Walk-in Shower Installation
+                  Pricing Guide
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/bathroom-remodeling-mesa-az"
+                  className="text-background/70 hover:text-primary transition-colors text-sm"
+                >
+                  Mesa Remodeling
                 </Link>
               </li>
             </ul>

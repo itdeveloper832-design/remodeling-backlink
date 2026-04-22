@@ -5,54 +5,10 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import {
-  Droplets,
-  Lightbulb,
-  Grid3X3,
-  RectangleHorizontal,
-  Bath,
-  Accessibility,
-  type LucideIcon,
-} from "lucide-react";
+import { bathroomServices } from "@/lib/bathroom-services";
+import { type LucideIcon } from "lucide-react";
 
-const services = [
-  {
-    icon: Droplets,
-    title: "Shower Remodeling",
-    description: "Transform your shower with modern fixtures, tile work, and accessibility features.",
-    href: "/shower-remodeling"
-  },
-  {
-    icon: Bath,
-    title: "Bathtub Installation",
-    description: "Upgrade to a luxurious bathtub or convert your tub to a walk-in shower.",
-    href: "/bathtub-remodeling"
-  },
-  {
-    icon: Grid3X3,
-    title: "Tile Installation",
-    description: "Beautiful tile work for floors, walls, and backsplashes in any style.",
-    href: "/bathroom-tile-installation"
-  },
-  {
-    icon: RectangleHorizontal,
-    title: "Vanity Installation",
-    description: "Custom vanities and countertops to maximize storage and style.",
-    href: "/bathroom-vanity-installation"
-  },
-  {
-    icon: Lightbulb,
-    title: "Lighting Installation",
-    description: "Improve your bathroom's ambiance with professional lighting solutions.",
-    href: "/bathroom-lighting-installation"
-  },
-  {
-    icon: Accessibility,
-    title: "Accessibility Remodeling",
-    description: "ADA-compliant modifications for safety and accessibility.",
-    href: "/bathroom-accessibility-remodeling"
-  }
-];
+const services = bathroomServices;
 
 type SubServiceItem = {
   icon: LucideIcon;
@@ -114,7 +70,7 @@ export default function SubServices({
                   <service.icon className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="font-serif text-xl font-semibold mb-3 text-foreground">
-                  {service.title}
+                  {service.name}
                 </h3>
                 <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
                   {service.description}

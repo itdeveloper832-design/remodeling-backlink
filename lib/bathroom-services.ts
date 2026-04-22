@@ -93,10 +93,10 @@ export const bathroomServices: BathroomService[] = [
     icon: Droplets,
   },
   {
-    name: "Bathroom Accessibility Remodeling",
-    href: "/bathroom-accessibility-remodeling",
+    name: "Handicap Accessible Bathroom",
+    href: "/handicap-accessible-bathroom-chandler",
     description:
-      "ADA-compliant bathroom accessibility remodeling for seniors and individuals with mobility needs.",
+      "Safe, ADA-compliant bathroom modifications for seniors and individuals with mobility needs.",
     icon: Accessibility,
   },
   {
@@ -104,6 +104,13 @@ export const bathroomServices: BathroomService[] = [
     href: "/small-bathroom-remodeling",
     description:
       "Maximize your small bathroom space with our expert small bathroom remodeling services.",
-    icon: Bath,
+    icon: LayoutGrid,
+  },
+  {
+    name: "Master Bathroom Remodel",
+    href: "/master-bathroom-remodel",
+    description:
+      "Transform your master bath into a luxury retreat with premium features and custom designs.",
+    icon: Sparkles,
   },
 ];

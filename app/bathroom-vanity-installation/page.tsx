@@ -14,11 +14,13 @@ import { GoogleMap } from "@/components/google-map";
 import { siteConfig } from "@/lib/site-config";
 import { ServiceSchema, FAQSchema } from "@/components/seo/json-ld";
 import { serviceContent } from "@/lib/service-content-data";
+import SubServices from "@/components/sub-services";
+import { bathroomServices } from "@/lib/bathroom-services";
 
 export const metadata: Metadata = {
-  title: "Bathroom Vanity Installation Chandler AZ | Pro",
-  description: "Professional bathroom vanity installation in Chandler, AZ. Custom designs, expert installation, and coordinated fixtures. Free quotes!",
-  keywords: ["vanity installation chandler", "bathroom vanity replacement", "double sink vanity", "custom vanity installation"],
+  title: "Bathroom Vanity Installation Chandler AZ | Custom",
+  description: "Custom bathroom vanity installation Chandler AZ. Single & double sink setups with luxury countertops. Transform your space today!",
+  keywords: ["bathroom vanity installation Chandler", "vanity installation chandler", "bathroom vanity replacement", "double sink vanity", "custom vanity installation"],
   openGraph: {
     title: "Bathroom Vanity Installation Chandler AZ",
     description: "Professional vanity installation in Chandler with custom designs and expert installation.",
@@ -47,6 +49,10 @@ export const metadata: Metadata = {
 const faqs = serviceContent["bathroom-vanity-installation"].faqs;
 
 const chandlerLocation = { lat: 33.3062, lng: -111.8413 };
+
+const otherServices = bathroomServices
+  .filter(s => s.href !== "/bathroom-vanity-installation")
+  .slice(0, 3);
 
 export default function BathroomVanityInstallationPage() {
   const vanityData = serviceContent["bathroom-vanity-installation"];
@@ -107,6 +113,14 @@ export default function BathroomVanityInstallationPage() {
         />
 
         <ServiceCTA title="Ready for professional vanity installation in Chandler?" description="Get expert consultation, quality materials, and professional installation for your perfect bathroom vanity." />
+
+        <SubServices 
+          title="Explore More Bathroom Services"
+          subtitle="More Solutions"
+          description="From showers to tile work, we provide complete bathroom remodeling solutions in Chandler."
+          services={otherServices}
+        />
+
         <ServiceFAQ faqs={faqs} />
         <Testimonials />
         <ContactSection />

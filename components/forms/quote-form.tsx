@@ -173,6 +173,7 @@ export function QuoteForm() {
                 {service.name}
               </option>
             ))}
+            <option value="Other">Other</option>
           </select>
         </div>
         

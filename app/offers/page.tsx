@@ -38,8 +38,8 @@ export const metadata: Metadata = {
 const offers = [
   {
     title: "Shower Remodeling Package",
-    discount: "Save $500",
-    validUntil: "Valid through December 31, 2024",
+    discount: "20% Off",
+    validUntil: "Valid through June 30, 2026",
     description: "Complete shower remodel including tile, glass enclosure, and fixtures for Chandler homeowners.",
     includes: [
       "Free design consultation",
@@ -52,7 +52,7 @@ const offers = [
   },
   {
     title: "Walk-in Shower Special",
-    discount: "15% Off",
+    discount: "25% Off",
     validUntil: "Limited time offer",
     description: "Accessible walk-in shower installation with slip-resistant tile and safety features.",
     includes: [
@@ -66,7 +66,7 @@ const offers = [
   },
   {
     title: "Bathroom Tile Bundle",
-    discount: "$300 Off",
+    discount: "10% Off",
     validUntil: "Book by end of month",
     description: "Professional tile installation for shower walls, floors, and backsplashes in Chandler homes.",
     includes: [
@@ -80,7 +80,7 @@ const offers = [
   },
   {
     title: "Vanity & Tile Combo",
-    discount: "Save $400",
+    discount: "30% Off",
     validUntil: "New customers only",
     description: "Upgrade your bathroom with a new vanity and coordinated tile backsplash.",
     includes: [
