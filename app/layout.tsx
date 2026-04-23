@@ -61,6 +61,9 @@ export const metadata: Metadata = {
   },
   verification: {
     google: 'FFV2ndN2ia6STi_P5mni2D73Ec1dbptXHNQuIVIl3YA',
+    other: {
+      'msvalidate.01': 'B0C98ADCACAB379AE270B05F347ED07F',
+    },
   },
   icons: {
     icon: '/images/logo-main.png',
