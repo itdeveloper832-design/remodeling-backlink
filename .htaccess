@@ -15,8 +15,12 @@
   # RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
   
   # Next.js routing - serve index.html for all non-file/non-directory requests
+  # Exclude API routes and IndexNow files from rewrite
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} !^/api/
+  RewriteCond %{REQUEST_URI} !\.php$
+  RewriteCond %{REQUEST_URI} !\.txt$
   RewriteRule ^(.*)$ /index.html [L]
 </IfModule>
 

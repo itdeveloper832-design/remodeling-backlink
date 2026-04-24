@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Output configuration for static FTP deployment
-  output: 'export',
+  // Output configuration for cPanel deployment
+  output: 'standalone',
 
   // Image Optimization - disable for static export
   images: {
