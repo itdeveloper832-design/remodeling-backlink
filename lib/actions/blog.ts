@@ -1,5 +1,6 @@
 import type { BlogPost, Category } from "@/lib/types";
 import { defaultBlogPost, secondBlogPost } from "@/lib/seed-blog";
+import { submitToIndexNow } from "@/lib/indexnow";
 
 function generateSlug(title: string): string {
   return title
@@ -76,6 +77,12 @@ export async function createPost(
     updatedAt: now,
     publishedAt: data.status === "published" ? now : null,
   });
+
+  // IndexNow: Submit if published
+  if (data.status === "published") {
+    submitToIndexNow([`/blog/${slug}`, "/blog"]);
+  }
+
   return { success: true, id };
 }
 
@@ -83,6 +90,11 @@ export async function updatePost(
   id: string,
   data: Partial<Omit<BlogPost, "id" | "createdAt">>
 ): Promise<{ success: boolean; error?: string }> {
+  const post = inMemoryPosts.find(p => p.id === id);
+  if (post && post.status === "published") {
+    submitToIndexNow([`/blog/${post.slug}`, "/blog"]);
+  }
+
   inMemoryPosts = inMemoryPosts.map((post) =>
     post.id === id ? { ...post, ...data, updatedAt: new Date().toISOString() } : post
   );
@@ -90,6 +102,12 @@ export async function updatePost(
 }
 
 export async function deletePost(id: string): Promise<{ success: boolean; error?: string }> {
+  const post = inMemoryPosts.find(p => p.id === id);
+  if (post && post.status === "published") {
+    // Note: Technically for delete, some search engines want the URL submitted to signify it's gone
+    submitToIndexNow([`/blog/${post.slug}`, "/blog"]);
+  }
+  
   inMemoryPosts = inMemoryPosts.filter((post) => post.id !== id);
   return { success: true };
 }
@@ -100,6 +118,8 @@ export async function updatePostStatus(
   id: string,
   status: "draft" | "published"
 ): Promise<{ success: boolean; error?: string }> {
+  const post = inMemoryPosts.find(p => p.id === id);
+  
   inMemoryPosts = inMemoryPosts.map((post) =>
     post.id === id
       ? {
@@ -110,6 +130,12 @@ export async function updatePostStatus(
         }
       : post
   );
+
+  // IndexNow: Submit if newly published or updated while published
+  if (status === "published" && post) {
+    submitToIndexNow([`/blog/${post.slug}`, "/blog"]);
+  }
+
   return { success: true };
 }
 

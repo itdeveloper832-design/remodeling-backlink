@@ -1,5 +1,6 @@
 import { GalleryItem } from "@/lib/types";
 import { defaultGalleryItems } from "@/lib/seed-blog";
+import { submitToIndexNow } from "@/lib/indexnow";
 
 let inMemoryGallery: GalleryItem[] = defaultGalleryItems.map((item, index) => ({
   id: `gallery-${index + 1}`,
@@ -30,6 +31,10 @@ export async function createGalleryItem(
     ...data,
     createdAt: new Date(),
   });
+  
+  // IndexNow: Submit the gallery page
+  submitToIndexNow("/gallery");
+  
   return { success: true, id };
 }
 
@@ -40,11 +45,19 @@ export async function updateGalleryItem(
   inMemoryGallery = inMemoryGallery.map((item) =>
     item.id === id ? { ...item, ...data } : item
   );
+  
+  // IndexNow: Submit the gallery page
+  submitToIndexNow("/gallery");
+  
   return { success: true };
 }
 
 export async function deleteGalleryItem(id: string): Promise<{ success: boolean; error?: string }> {
   inMemoryGallery = inMemoryGallery.filter((item) => item.id !== id);
+  
+  // IndexNow: Submit the gallery page
+  submitToIndexNow("/gallery");
+  
   return { success: true };
 }
 
