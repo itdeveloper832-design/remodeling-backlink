@@ -8,7 +8,7 @@ const faqs = [
   {
     question: "How long does a typical bathroom remodel take in Chandler, Arizona?",
     answer:
-      "A standard bathroom remodel typically takes 2-4 weeks depending on the scope of work. Simple updates like replacing fixtures may take just a few days, while complete gut renovations with custom tile work can take 4-6 weeks. We also offer efficient bathroom remodeling services for quick updates. During your free consultation, we'll provide a detailed timeline specific to your project.",
+      "A standard bathroom remodel typically takes 2-4 weeks depending on the scope of work. Simple updates like replacing fixtures may take just a few days, while complete gut renovations with custom tile work can take 4-6 weeks. We also offer efficient bathroom remodeling in Chandler for quick updates. During your free consultation, we'll provide a detailed timeline specific to your project.",
   },
   {
     question: "What is the cost of bathroom remodeling in Chandler, AZ?",
@@ -21,9 +21,9 @@ const faqs = [
       "Yes! We offer flexible bathroom remodel financing options to fit your budget. Our financing plans include low monthly payments, competitive interest rates, and quick approval. During your consultation, we'll discuss all available financing options to help make your bathroom renovation affordable.",
   },
   {
-    question: "Are you the best bathroom remodel company in Chandler?",
+    question: "Are you the best choice for bathroom remodeling in Chandler?",
     answer:
-      "Chandler Bathroom Remodeling is consistently rated as the best bathroom remodel company in the area by our customers. We're fully licensed (ROC #123456), bonded, and insured for residential remodeling in Arizona. With 15+ years of experience and hundreds of 5-star reviews, we're the top-rated bathroom remodelers in Chandler and the East Valley.",
+      "Chandler Bathroom Remodeling is consistently rated as the best choice in the area by our customers. We're fully licensed (ROC #123456), bonded, and insured for residential remodeling in Arizona. With 15+ years of experience and hundreds of 5-star reviews, we're the top-rated bathroom remodelers in Chandler and the East Valley.",
   },
   {
     question: "Do you offer handicap accessible bathroom remodeling?",
@@ -105,7 +105,7 @@ export default function FAQ() {
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
               Find answers to common questions about our bathroom 
-              remodeling services in Chandler, Arizona.
+              remodeling in Chandler, Arizona.
             </p>
           </div>
 

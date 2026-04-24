@@ -40,7 +40,7 @@ export default function LegacySection() {
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               This legacy service is no longer offered. Please explore our bathroom remodeling
-              services for current offerings.
+              for current offerings.
             </p>
 
             {/* Features List */}
@@ -62,7 +62,7 @@ export default function LegacySection() {
               className="bg-primary hover:bg-primary/90 text-primary-foreground group"
             >
               <Link href="/">
-                View Bathroom Services
+                View Bathroom Remodeling Options
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>

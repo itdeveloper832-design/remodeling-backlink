@@ -67,7 +67,7 @@ export default function WhyChooseUs() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mt-4 mb-6 text-foreground text-balance"
           >
-            Trusted Bathroom Remodeling Services in Chandler, AZ
+            Top-Rated Bathroom Remodeling in Chandler, AZ
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

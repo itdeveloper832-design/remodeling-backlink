@@ -33,7 +33,7 @@ export default function AreaInterlinking() {
                   {service.description}
                 </p>
                 <div className="flex items-center text-primary text-sm font-medium">
-                  Learn More <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  Explore {service.name} <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </div>
               </Link>
             ))}

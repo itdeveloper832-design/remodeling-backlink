@@ -9,16 +9,16 @@ import { Button } from "@/components/ui/button";
 export const metadata: Metadata = {
   title: "Custom Bathroom Remodeling Services in Chandler",
   description: "Professional bathroom remodeling services. From tub conversions to full master bath builds in Chandler, AZ. Schedule your free quote!",
-  keywords: ["bathroom remodeling services", "bathroom remodel services chandler az", "bathroom installation services chandler az", "bathroom repair services chandler az", "bathroom upgrade cost chandler az", "bathroom redesign services chandler az", "professional bathroom remodel services chandler az"],
+  keywords: ["bathroom remodeling services", "Chandler AZ contractors", "custom shower builds", "bathroom renovations", "tub replacements"],
   openGraph: {
-    title: "Bathroom Remodel Services Chandler AZ | All",
-    description: "Complete bathroom remodel services Chandler AZ. Professional bathroom installation services!",
+    title: "Bathroom Remodeling Services in Chandler AZ",
+    description: "Complete renovation solutions for your home. Professional installations by licensed contractors.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bathroom Remodel Services Chandler AZ",
-    description: "Complete bathroom remodel services Chandler AZ. Free estimates!",
+    title: "Bathroom Remodeling Services Chandler AZ",
+    description: "Complete home renovation solutions in Chandler. Free estimates!",
   },
 };
 
@@ -32,15 +32,15 @@ export default function ServicesPage() {
           <div className="container mx-auto px-4 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
               <span className="text-primary text-sm font-medium tracking-wider uppercase">
-                Our Services
+                Our Capabilities
               </span>
               <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold mt-4 mb-6 text-foreground text-balance">
-                Bathroom Remodel Services Chandler AZ
+                Professional Bathroom Remodeling Services
               </h1>
               <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-                Complete bathroom remodel services from licensed bathroom remodeling contractors in Chandler AZ. 
-                Professional bathroom installation services, bathroom repair services, bathroom upgrade solutions, 
-                and bathroom redesign services. Affordable bathroom remodeling services with free in-home estimates.
+                Transform your home with our comprehensive bathroom remodeling services in Chandler, AZ. 
+                Our licensed contractors handle everything from custom shower installations and tub-to-shower conversions 
+                to complete master bath overhauls. Enjoy affordable, high-quality renovations tailored to your style.
               </p>
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
                 <Link href="/contact">Get Free Estimate</Link>
@@ -81,11 +81,11 @@ export default function ServicesPage() {
         <section className="bg-primary py-16 lg:py-20">
           <div className="container mx-auto px-4 lg:px-8 text-center">
             <h2 className="font-serif text-3xl md:text-4xl font-semibold text-primary-foreground mb-4">
-              Ready to Transform Your Bathroom?
+              Ready to Upgrade Your Space?
             </h2>
             <p className="text-primary-foreground/80 text-lg mb-8 max-w-2xl mx-auto">
-              Get a free, no-obligation estimate for your bathroom remodeling project. 
-              Our experts will help you design the perfect bathroom for your home.
+              Get a free, no-obligation estimate for your renovation project. 
+              Our experts will help you design the perfect layout and finishes for your home.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" variant="secondary" className="bg-background text-foreground hover:bg-background/90">

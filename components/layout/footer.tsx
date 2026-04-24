@@ -19,8 +19,8 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-background/70 text-sm leading-relaxed mb-6">
-              Premier bathroom remodeling services in Chandler, Arizona. 
-              The premier bathroom remodel company in Chandler, transforming homes with luxury designs and exceptional craftsmanship since 2008.
+              Top-rated bathroom remodeling in Chandler, Arizona. 
+              Transforming homes with luxury designs and exceptional craftsmanship since 2008.
             </p>
             <div className="flex gap-3">
               <a
@@ -59,42 +59,42 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  href="/services"
+                  href="/bathroom-remodeling"
                   className="text-background/70 hover:text-primary transition-colors text-sm"
                 >
-                  All Services
+                  Bathroom Remodeling Chandler AZ
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/master-bathroom-remodel"
+                  href="/shower-remodeling"
                   className="text-background/70 hover:text-primary transition-colors text-sm"
                 >
-                  Master Bathroom Remodel
+                  Shower Remodeling in Chandler
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/handicap-accessible-bathroom-chandler"
+                  href="/bathtub-replacement"
                   className="text-background/70 hover:text-primary transition-colors text-sm"
                 >
-                  Accessible Bathrooms
+                  Bathtub Replacement Chandler
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/bathroom-remodeling-cost-chandler-az"
+                  href="/walk-in-shower-installation"
                   className="text-background/70 hover:text-primary transition-colors text-sm"
                 >
-                  Pricing Guide
+                  Walk-in Showers Chandler AZ
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/bathroom-remodeling-mesa-az"
+                  href="/bathroom-tile-installation"
                   className="text-background/70 hover:text-primary transition-colors text-sm"
                 >
-                  Mesa Remodeling
+                  Bathroom Tile Contractors
                 </Link>
               </li>
             </ul>
@@ -104,6 +104,14 @@ export function Footer() {
           <div>
             <h3 className="font-serif text-xl font-semibold mb-6 text-background">Quick Links</h3>
             <ul className="space-y-3">
+              <li>
+                <Link
+                  href="/"
+                  className="text-background/70 hover:text-primary transition-colors text-sm"
+                >
+                  Bathroom Remodeling in Chandler AZ
+                </Link>
+              </li>
               {siteConfig.navigation.map((item) => (
                 <li key={item.name}>
                   <Link

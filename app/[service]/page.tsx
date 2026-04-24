@@ -346,9 +346,9 @@ const serviceContent: Record<string, ServiceDetail> = {
       finalDescription: "Call now for a same-week consultation and clear pricing on your new shower.",
     },
     seo: {
-      title: "Shower Remodeling in Chandler AZ | Custom Shower Renovations",
+      title: "Shower Remodeling Services in Chandler AZ | Local Contractors",
       description:
-        "Professional shower remodeling in Chandler, Arizona. Custom tile, frameless glass enclosures, waterproof installations, and premium fixtures. Call for a free shower remodel estimate today.",
+        "Professional shower remodeling services in Chandler, Arizona. Custom tile, frameless glass enclosures, waterproof installations, and premium fixtures from trusted contractors.",
     },
     relatedServices: {
       title: "Related Bathroom Services in Chandler",
@@ -506,9 +506,9 @@ const serviceContent: Record<string, ServiceDetail> = {
       finalDescription: "Call now for fast scheduling and a polished install that's ready to use.",
     },
     seo: {
-      title: "Bathtub Installation Chandler AZ | Professional Tub Installers",
+      title: "Bathtub Installation Services Chandler AZ | Professional Tub Installers",
       description:
-        "Expert bathtub installation in Chandler, Arizona. Level installs, proper drainage, waterproof sealing, and coordinated trim. Get a free bathtub installation estimate today.",
+        "Expert bathtub installation services in Chandler, Arizona. Level installs, proper drainage, waterproof sealing, and coordinated trim. Get a free bathtub installation estimate from local contractors.",
     },
     relatedServices: {
       title: "Related Bathroom Services in Chandler",
@@ -666,9 +666,9 @@ const serviceContent: Record<string, ServiceDetail> = {
       finalDescription: "Call now for a fast quote and professional tub replacement scheduling.",
     },
     seo: {
-      title: "Bathtub Replacement Chandler AZ | Modern Tub Upgrades",
+      title: "Bathtub Replacement Services Chandler AZ | Modern Tub Upgrades",
       description:
-        "Professional bathtub replacement in Chandler, Arizona. Clean removal, updated plumbing, level installs, and fresh finishes. Contact us for a fast bathtub replacement quote.",
+        "Professional bathtub replacement services in Chandler, Arizona. Clean removal, updated plumbing, level installs, and fresh finishes from top contractors. Contact us for a fast quote.",
     },
     relatedServices: {
       title: "Related Bathroom Services in Chandler",
@@ -826,9 +826,9 @@ const serviceContent: Record<string, ServiceDetail> = {
       finalDescription: "Call today for a fast walkthrough and tailored walk-in shower estimate.",
     },
     seo: {
-      title: "Walk-in Shower Installation Chandler AZ | Accessible Showers",
+      title: "Walk-in Shower Installation Services Chandler AZ | Local Contractors",
       description:
-        "Professional walk-in shower installation in Chandler, Arizona. Curbless and low-threshold showers, slip-resistant tile, glass enclosures, and waterproofing. Schedule your estimate.",
+        "Professional walk-in shower installation services in Chandler, Arizona. Curbless and low-threshold showers, slip-resistant tile, glass enclosures, and waterproofing by local contractors.",
     },
     relatedServices: {
       title: "Related Bathroom Services in Chandler",
@@ -986,9 +986,9 @@ const serviceContent: Record<string, ServiceDetail> = {
       finalDescription: "Call now for a tile installation estimate with waterproofing and cleanup included.",
     },
     seo: {
-      title: "Bathroom Tile Installation Chandler AZ | Waterproof Tile Experts",
+      title: "Bathroom Tile Installation Services Chandler AZ | Tile Contractors",
       description:
-        "Expert bathroom tile installation in Chandler, Arizona. Layout planning, waterproofing, precision installs, and sealed grout for showers, floors, and backsplashes. Get your tile quote.",
+        "Expert bathroom tile installation services in Chandler, Arizona. Layout planning, waterproofing, precision installs, and sealed grout for showers, floors, and backsplashes by certified contractors.",
     },
     relatedServices: {
       title: "Related Bathroom Services in Chandler",
@@ -1146,9 +1146,9 @@ const serviceContent: Record<string, ServiceDetail> = {
       finalDescription: "Call now for a precise vanity install with leveled tops and sealed plumbing.",
     },
     seo: {
-      title: "Bathroom Vanity Installation Chandler AZ | Custom Vanity Pros",
+      title: "Bathroom Vanity Installation Services Chandler AZ | Vanity Contractors",
       description:
-        "Professional bathroom vanity installation in Chandler, Arizona. Measurements, leveling, countertop install, plumbing hook-ups, and storage planning. Get your vanity estimate today.",
+        "Professional bathroom vanity installation services in Chandler, Arizona. Measurements, leveling, countertop install, plumbing hook-ups, and storage planning by local contractors.",
     },
     relatedServices: {
       title: "Related Bathroom Services in Chandler",
@@ -1174,7 +1174,7 @@ const serviceContent: Record<string, ServiceDetail> = {
 };
 
 export function generateStaticParams() {
-  return Object.keys(serviceMap).map((slug) => ({ service: slug }));
+  return Object.keys(serviceContent).map((slug) => ({ service: slug }));
 }
 
 export const dynamicParams = false;
@@ -1197,7 +1197,7 @@ export async function generateMetadata({
   return {
     title,
     description,
-    keywords: [service.name.toLowerCase(), "chandler arizona", "remodeling contractors"],
+    keywords: [service.name.toLowerCase(), `${service.name.toLowerCase()} services`, `${service.name.toLowerCase()} contractors`, "chandler arizona", "remodeling contractors"],
     openGraph: {
       title,
       description,
@@ -1339,7 +1339,7 @@ export default async function BathroomServicePage({
                       {relatedService.description}
                     </p>
                     <span className="text-primary font-medium text-sm">
-                      Learn More →
+                      Explore {relatedService.name} →
                     </span>
                   </Link>
                 ))}

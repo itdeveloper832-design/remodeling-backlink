@@ -23,6 +23,9 @@ import { getAllLeads, updateLeadStatus, deleteLead } from "@/lib/actions/leads"
 import type { Lead } from "@/lib/types"
 import { MoreHorizontal, Mail, Phone, Calendar, Trash2, Check, Clock, X, Download } from "lucide-react"
 
+import { db } from "@/lib/firebase"
+import { collection, onSnapshot, query, orderBy } from "firebase/firestore"
+
 const statusColors: Record<string, string> = {
   new: "bg-blue-100 text-blue-800",
   contacted: "bg-amber-100 text-amber-800",
@@ -36,24 +39,29 @@ export default function AdminLeadsPage() {
   const [filter, setFilter] = useState<string>("all")
 
   useEffect(() => {
-    fetchLeads()
-  }, [])
+    const q = query(collection(db, "leads"), orderBy("createdAt", "desc"));
+    const unsubscribe = onSnapshot(q, (snapshot) => {
+      const updatedLeads = snapshot.docs.map(doc => ({
+        id: doc.id,
+        ...doc.data()
+      })) as Lead[];
+      setLeads(updatedLeads);
+      setLoading(false);
+    }, (error) => {
+      console.error("Error fetching leads real-time:", error);
+      setLoading(false);
+    });
 
-  async function fetchLeads() {
-    const data = await getAllLeads()
-    setLeads(data)
-    setLoading(false)
-  }
+    return () => unsubscribe();
+  }, [])
 
   async function handleStatusChange(id: string, status: Lead["status"]) {
     await updateLeadStatus(id, status)
-    fetchLeads()
   }
 
   async function handleDelete(id: string) {
     if (confirm("Are you sure you want to delete this lead?")) {
       await deleteLead(id)
-      fetchLeads()
     }
   }
 

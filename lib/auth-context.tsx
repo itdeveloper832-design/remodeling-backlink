@@ -1,12 +1,12 @@
 "use client"
 
 import { createContext, useContext, useEffect, useState, ReactNode } from "react"
+import { signInWithEmailAndPassword, signOut as firebaseSignOut, onAuthStateChanged, User as FirebaseUser } from "firebase/auth"
+import { auth } from "@/lib/firebase"
+
 interface User {
   email: string | null
 }
-
-// Admin email whitelist - only these emails can access admin panel
-const ADMIN_EMAILS = ["mi6062610@gmail.com"]
 
 interface AuthContextType {
   user: User | null
@@ -23,31 +23,34 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    const isAdmin = document.cookie.includes("is_admin=true")
-    if (isAdmin) {
-      setUser({ email: ADMIN_EMAILS[0] })
-    } else {
-      setUser(null)
-    }
-    setLoading(false)
+    const unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
+      if (firebaseUser) {
+        setUser({ email: firebaseUser.email });
+        // Set a cookie so middleware or other server-side checks know they are an admin if needed.
+        // Though purely client-side routing is often enough for simple panels.
+        document.cookie = "is_admin=true; path=/; max-age=86400"; // 1 day
+      } else {
+        setUser(null);
+        document.cookie = "is_admin=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+      }
+      setLoading(false);
+    });
+
+    return () => unsubscribe();
   }, [])
 
-  const isAdmin = user ? ADMIN_EMAILS.includes(user.email || "") : false
+  // Any authenticated user in Firebase is considered an admin for this context
+  const isAdmin = !!user;
 
   const signIn = async (email: string, password: string) => {
-    // Check if email is in admin whitelist before allowing sign in
-    if (!ADMIN_EMAILS.includes(email)) {
-      throw new Error("Access denied. You are not authorized to access the admin panel.")
+    if (!email || !password) {
+      throw new Error("Email and password are required.");
     }
-    if (!password) {
-      throw new Error("Password is required.")
-    }
-    setUser({ email })
+    await signInWithEmailAndPassword(auth, email, password);
   }
 
   const signOut = async () => {
-    await fetch("/api/admin/logout", { method: "POST", credentials: "include" })
-    setUser(null)
+    await firebaseSignOut(auth);
     if (typeof window !== "undefined") {
       window.location.href = "/admin/login"
     }

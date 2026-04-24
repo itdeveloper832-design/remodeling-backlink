@@ -18,12 +18,12 @@ import SubServices from "@/components/sub-services";
 import { bathroomServices } from "@/lib/bathroom-services";
 
 export const metadata: Metadata = {
-  title: "Bathroom Tile Installation Chandler AZ | Floor & Wall",
-  description: "Premium bathroom tile installation Chandler AZ. Custom ceramic, porcelain, & marble flooring and shower walls. Get a free quote!",
-  keywords: ["bathroom tile installation Chandler", "bathroom tile installation chandler az", "shower tile installation chandler", "bathroom floor tile", "tile contractors chandler", "bathroom backsplash installation", "waterproof tile installation"],
+  title: "Bathroom Tile Installation Chandler AZ | Custom Flooring",
+  description: "Premium bathroom tile installation in Chandler AZ. Custom ceramic, porcelain, & marble flooring and shower walls. Get a free quote!",
+  keywords: ["bathroom tile installation Chandler", "shower tile AZ", "bathroom floor tiles", "tile contractors Chandler", "backsplash installers", "waterproof tile"],
   openGraph: {
-    title: "Bathroom Tile Installation Chandler AZ",
-    description: "Professional bathroom tile installation in Chandler with shower tile, floor tile and backsplash work.",
+    title: "Bathroom Tile Installation in Chandler AZ",
+    description: "Professional tile setting in Chandler with shower walls, floor tiles, and backsplash work.",
     url: `${siteConfig.url}/bathroom-tile-installation`,
     type: "website",
     images: [
@@ -31,14 +31,14 @@ export const metadata: Metadata = {
         url: `${siteConfig.url}/images/tile-installation-hero.jpg`,
         width: 1200,
         height: 630,
-        alt: "Bathroom Tile Installation - Chandler Bathroom Remodeling",
+        alt: "Custom Bathroom Tile Chandler",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bathroom Tile Installation Chandler AZ",
-    description: "Professional bathroom tile installation in Chandler with shower tile, floor tile and backsplash work.",
+    title: "Tile Installation Chandler AZ",
+    description: "Professional tiling services in Chandler with shower walls, floor tiles, and backsplashes.",
     images: [`${siteConfig.url}/images/tile-installation-hero.jpg`],
   },
   alternates: {
@@ -47,9 +47,7 @@ export const metadata: Metadata = {
 };
 
 const faqs = serviceContent["bathroom-tile-installation"].faqs;
-
 const chandlerLocation = { lat: 33.3062, lng: -111.8413 };
-
 const otherServices = bathroomServices
   .filter(s => s.href !== "/bathroom-tile-installation")
   .slice(0, 3);
@@ -59,52 +57,56 @@ export default function BathroomTileInstallationPage() {
   
   return (
     <>
-      <ServiceSchema serviceName="Bathroom Tile Installation in Chandler, Arizona" serviceDescription="Professional bathroom tile installation in Chandler, Arizona. Shower tile, floor tile, and backsplash installation with waterproofing." serviceUrl={`${siteConfig.url}/bathroom-tile-installation`} />
+      <ServiceSchema 
+        serviceName="Bathroom Tile Installation in Chandler, Arizona" 
+        serviceDescription="Expert bathroom tile setting in Chandler, Arizona. Custom flooring, waterproof shower walls, and premium ceramics." 
+        serviceUrl={`${siteConfig.url}/bathroom-tile-installation`} 
+      />
       <FAQSchema faqs={faqs} />
       <Header />
       <main>
         <ServiceHero
-          title="Bathroom Tile Installation in Chandler, Arizona"
-          subtitle="Expert Tile Installation in Chandler AZ"
-          description="Professional bathroom tile installation with waterproof systems, precision craftsmanship, and premium materials for lasting beauty."
+          title="Premium Tile Installation in Chandler, Arizona"
+          subtitle="Expert Tile Contractors in Chandler AZ"
+          description="Elevate your space with flawless tiling work. From waterproof shower surrounds to stunning floor patterns, our precision craftsmanship ensures lasting beauty."
           image="/images/optimized/photo-1507089947368-19c1da9775ae.webp"
-          breadcrumbs={[{ name: "Home", url: siteConfig.url }, { name: "Bathroom Tile Installation", url: `${siteConfig.url}/bathroom-tile-installation` }]}
+          breadcrumbs={[{ name: "Home", url: siteConfig.url }, { name: "Tile Installation", url: `${siteConfig.url}/bathroom-tile-installation` }]}
         />
         <ServiceProcess
-          title="Bathroom Tile Installation Process"
-          subtitle="Our Process"
-          description="Professional tile installation with waterproof preparation and precision craftsmanship."
+          title="Our Tiling Process"
+          subtitle="How We Work"
+          description="A professional approach to setting ceramics, porcelain, and stone with waterproof preparation and precision craftsmanship."
           steps={[
-            { number: "01", icon: "Ruler", title: "Layout & Design", description: "Plan tile patterns, grout lines, and transitions that align with fixtures and design." },
-            { number: "02", icon: "ShieldCheck", title: "Surface Preparation", description: "Install backer board, waterproofing membranes, and level surfaces for tile installation." },
-            { number: "03", icon: "Hammer", title: "Tile Installation", description: "Precision tile setting with proper spacing, alignment, and cuts around fixtures." },
-            { number: "04", icon: "Paintbrush", title: "Grouting", description: "Professional grout application with consistent color and proper curing time." },
-            { number: "05", icon: "Sparkles", title: "Sealing & Finishing", description: "Grout sealing, final cleanup, and quality inspection for perfect results." }
+            { number: "01", icon: "Ruler", title: "Layout & Design", description: "Plan patterns, grout lines, and transitions that align perfectly with your space." },
+            { number: "02", icon: "ShieldCheck", title: "Surface Preparation", description: "Install backer board, waterproofing membranes, and level surfaces for longevity." },
+            { number: "03", icon: "Hammer", title: "Tile Setting", description: "Precision placement with proper spacing, alignment, and expert cuts around fixtures." },
+            { number: "04", icon: "Paintbrush", title: "Grouting", description: "Professional application with consistent color and proper curing time." },
+            { number: "05", icon: "Sparkles", title: "Sealing & Finishing", description: "Sealing against moisture, final cleanup, and a quality inspection for perfect results." }
           ]}
         />
         <IssuesSolved
-          title="Issues We Solve with Bathroom Tile Installation"
+          title="Issues We Solve with Custom Tiling"
           subtitle="Common Problems Fixed"
-          description="We address the most common tile installation challenges Chandler homeowners face."
+          description="We address the most common flooring and shower wall challenges Chandler homeowners face."
           issues={tileData.issues}
         />
         <Benefits
-          title="Benefits of Professional Bathroom Tile Installation"
+          title="Benefits of Professional Tile Work"
           subtitle="Why It Matters"
           benefits={tileData.benefits}
         />
         <Tips
-          title="Expert Bathroom Tile Installation Tips"
+          title="Expert Maintenance Tips"
           subtitle="Professional Insights"
-          description="Smart strategies to maintain and maximize your newly installed bathroom tile."
+          description="Smart strategies to maintain and maximize the life of your newly upgraded surfaces."
           tips={tileData.tips}
         />
-        <ServiceCTA title="Ready for professional bathroom tile installation?" description="Get expert design consultation, quality materials, and precision installation for beautiful bathroom tile work." />
+        <ServiceCTA title="Ready for a stunning flooring upgrade?" description="Get expert design consultation, quality materials, and precision tiling for your dream home." />
 
         <SubServices 
-          title="Explore More Bathroom Upgrades"
+          title="Explore More Washroom Upgrades"
           subtitle="Complete Solutions"
-          description="Beyond tile, we offer full-service bathroom remodeling to transform your home."
+          description="Beyond tile, we offer full-service renovation options to transform your home."
           services={otherServices.map(s => s.name)}
         />
 
@@ -115,18 +117,18 @@ export default function BathroomTileInstallationPage() {
           <div className="container mx-auto px-4 lg:px-8 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div>
               <span className="text-primary text-sm font-medium tracking-wider uppercase">Chandler, AZ</span>
-              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mt-4 mb-4 text-foreground text-balance">Bathroom Tile Installation Service Area in Chandler, Arizona</h2>
-              <p className="text-muted-foreground text-lg leading-relaxed mb-6">Expert bathroom tile installation services throughout Chandler, Arizona and surrounding communities.</p>
+              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mt-4 mb-4 text-foreground text-balance">Tile Installation Service Area in Chandler, Arizona</h2>
+              <p className="text-muted-foreground text-lg leading-relaxed mb-6">Expert surface upgrades and flooring services throughout Chandler, Arizona and surrounding communities.</p>
               <ul className="space-y-2 text-foreground">
                 <li>• Chandler, AZ and nearby areas</li>
-                <li>• Licensed tile installation contractors</li>
-                <li>• Waterproofing and precision installation specialists</li>
+                <li>• Licensed local contractors</li>
+                <li>• Waterproofing and precision specialists</li>
               </ul>
             </div>
-            <div><GoogleMap lat={chandlerLocation.lat} lng={chandlerLocation.lng} zoom={12} title="Bathroom Tile Installation in Chandler, AZ" address="Chandler, Arizona" /></div>
+            <div><GoogleMap lat={chandlerLocation.lat} lng={chandlerLocation.lng} zoom={12} title="Tile Setting in Chandler, AZ" address="Chandler, Arizona" /></div>
           </div>
         </section>
-        <ServiceCTA title="Need bathroom tile installation in Chandler, AZ?" description="Contact us for professional bathroom tile installation with waterproof systems and expert craftsmanship." />
+        <ServiceCTA title="Need a flooring update in Chandler, AZ?" description="Contact us for custom tiling with waterproof systems and expert craftsmanship." />
       </main>
       <Footer />
     </>

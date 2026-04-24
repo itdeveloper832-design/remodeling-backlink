@@ -49,14 +49,14 @@ export default function Hero() {
 
             {/* Headline - Accessible H1 */}
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-background leading-tight mb-6 text-balance focus-visible:outline-none">
-              Expert Bathroom Remodeling Chandler AZ
+              Bathroom Remodeling in Chandler AZ
             </h1>
 
             {/* Subheadline */}
             <p className="text-lg md:text-xl text-background/80 mb-10 leading-relaxed font-light">
-              Transform your home with the leading experts in <strong>bathroom remodeling Chandler AZ</strong>. 
-              Whether you need comprehensive <strong>bathroom remodeling services</strong> or a quick update, 
-              our award-winning <strong>bathroom remodeling company</strong> delivers stunning, high-quality results. 
+              Transform your home with the leading experts in <strong>bathroom remodeling in Chandler AZ</strong>. 
+              Whether you need a comprehensive update or a quick tub replacement, 
+              we deliver stunning, high-quality results. 
               Licensed and insured with over 15 years of local experience.
             </p>
 

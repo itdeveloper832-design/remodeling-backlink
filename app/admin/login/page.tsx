@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { useAuth } from '@/lib/auth-context';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -27,36 +28,25 @@ export default function AdminLoginPage() {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
+  const { signIn } = useAuth();
+
   async function handleLogin(e: React.FormEvent) {
     e.preventDefault();
     setError('');
     setLoading(true);
 
     try {
-      // Send credentials to secure server endpoint
-      const response = await fetch('/api/admin/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        credentials: 'include', // Include HTTP-only cookies
-        body: JSON.stringify({ email, password }),
-      });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        setError(data.error || 'Login failed');
-        return;
-      }
-
-      // Clear sensitive data from memory
-      setEmail('');
-      setPassword('');
-
-      // Redirect to dashboard (HTTP-only session cookie is sent automatically)
+      await signIn(email, password);
+      // Redirect to dashboard
       router.push('/admin/dashboard');
-    } catch (err) {
+    } catch (err: any) {
       console.error('[LOGIN_ERROR]', err);
-      setError('An error occurred. Please try again.');
+      // Map Firebase auth errors to readable messages
+      if (err.code === 'auth/invalid-credential') {
+        setError('Invalid email or password.');
+      } else {
+        setError(err.message || 'An error occurred. Please try again.');
+      }
     } finally {
       setLoading(false);
     }

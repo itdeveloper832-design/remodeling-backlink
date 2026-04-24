@@ -86,7 +86,7 @@ export default function SubServices({
                   {service.description}
                 </p>
                 <Button asChild variant="outline" size="sm">
-                  <Link href={service.href ?? "/services"}>Learn More</Link>
+                  <Link href={service.href ?? "/services"}>Explore {'title' in service ? service.title : (service as any).name}</Link>
                 </Button>
               </motion.div>
             )})}

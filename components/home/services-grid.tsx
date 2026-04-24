@@ -45,7 +45,7 @@ export default function ServicesGrid() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-muted-foreground text-lg leading-relaxed space-y-4"
           >
-            <p>Our bathroom remodeling company specializes in turning outdated, cramped spaces into luxurious retreats. We offer:</p>
+            <p>We specialize in turning outdated, cramped spaces into luxurious retreats. We offer:</p>
             <ul className="list-disc text-left inline-block space-y-1 ml-4">
               <li><strong>Master Bath Makeovers:</strong> Full-scale expansions and luxury upgrades.</li>
               <li><strong>Tub-to-Shower Conversions:</strong> Safe, accessible, and modern shower installations.</li>
@@ -56,7 +56,7 @@ export default function ServicesGrid() {
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.slice(0, 6).map((service, index) => {
+          {services.map((service, index) => {
             const MotionLink = motion.create(Link);
             return (
               <MotionLink

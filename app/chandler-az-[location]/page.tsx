@@ -36,13 +36,14 @@ export async function generateMetadata({
         ? location.neighborhood.name
         : "Chandler, AZ";
 
-  const title = `Bathroom Remodeling in ${displayName}`;
-  const description = `Expert bathroom remodeling services in ${displayName}. Licensed contractors with local expertise. Free estimates today.`;
+  const title = `Bathroom Remodeling in ${displayName} | Local Contractors`;
+  const description = `Expert bathroom remodeling Chandler AZ serving ${displayName}. Licensed local contractors delivering custom showers, tubs, and full renovations. Get a free quote!`;
   const url = `${siteConfig.url}/chandler-az-${resolvedParams.location}`;
 
   return {
     title,
     description,
+    keywords: [`bathroom remodeling Chandler AZ`, `bathroom remodeling ${displayName}`, `bathroom remodel contractor`, `shower replacement ${displayName}`],
     alternates: {
       canonical: url,
     },
@@ -111,7 +112,8 @@ export default async function LocationPage({
                   ? zipData.description
                   : neighborhood
                     ? neighborhood.description
-                    : "Professional bathroom remodeling services with local expertise"}
+                    : "Professional bathroom remodeling services with local expertise."}
+                {" "}As your trusted local experts for bathroom remodeling in Chandler, AZ, we deliver exceptional craftsmanship tailored to your neighborhood's unique homes.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -136,7 +138,7 @@ export default async function LocationPage({
             <div className="container mx-auto px-4">
               <div className="max-w-3xl">
                 <h2 className="text-3xl font-serif font-semibold mb-6">
-                  {neighborhood.name} Bathroom Remodeling
+                  {neighborhood.name} Bathroom Remodeling Contractor
                 </h2>
 
                 {/* Market Insights */}
@@ -187,34 +189,34 @@ export default async function LocationPage({
         <section className="py-16 md:py-24">
           <div className="container mx-auto px-4 max-w-3xl">
             <h2 className="text-3xl font-serif font-semibold mb-12">
-              Our Bathroom Remodeling Process
+              Our Professional Remodeling Process
             </h2>
             <div className="space-y-6">
               {[
                 {
                   step: "01",
                   title: "Free Consultation",
-                  desc: "Meet at your home to discuss vision and budget",
+                  desc: "Meet at your home to discuss your bathroom remodel vision and budget.",
                 },
                 {
                   step: "02",
                   title: "Design & Planning",
-                  desc: "Create detailed plans and 3D renderings",
+                  desc: "Create detailed layout plans and 3D renderings for your Chandler AZ home.",
                 },
                 {
                   step: "03",
                   title: "Permitting & Prep",
-                  desc: "Handle all permits and site preparation",
+                  desc: "Our contractor team handles all local permits and site preparation safely.",
                 },
                 {
                   step: "04",
                   title: "Expert Installation",
-                  desc: "Professional installation with quality craftsmanship",
+                  desc: "Professional installation ensuring quality craftsmanship from start to finish.",
                 },
                 {
                   step: "05",
                   title: "Final Inspection",
-                  desc: "Thorough walkthrough and punch list completion",
+                  desc: "Thorough walkthrough and punch list completion for your new bathroom.",
                 },
               ].map((item) => (
                 <div key={item.step} className="flex gap-6">
@@ -232,7 +234,7 @@ export default async function LocationPage({
         </section>
 
         {/* Related Locations */}
-        <section className="py-16 md:py-24">
+        <section className="py-16 md:py-24 bg-secondary">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-serif font-semibold mb-12 text-center">
               Other Service Areas in {zipData.city}
@@ -249,7 +251,7 @@ export default async function LocationPage({
                     <Link
                       key={n.slug}
                       href={`/chandler-az-${n.slug}`}
-                      className="p-4 border border-border rounded-lg hover:bg-secondary transition"
+                      className="p-4 border border-border bg-background rounded-lg hover:border-primary/50 transition"
                     >
                       <h4 className="font-semibold mb-2">{n.name}</h4>
                       <p className="text-sm text-muted-foreground">
@@ -272,7 +274,7 @@ export default async function LocationPage({
                     <Link
                       key={zip.zip}
                       href={`/chandler-az-${zip.slug}`}
-                      className="p-4 border border-border rounded-lg hover:bg-secondary transition"
+                      className="p-4 border border-border bg-background rounded-lg hover:border-primary/50 transition"
                     >
                       <h4 className="font-semibold mb-2">{zip.zip}</h4>
                       <p className="text-sm text-muted-foreground">
@@ -293,8 +295,7 @@ export default async function LocationPage({
               Ready to transform your {displayName} bathroom?
             </h2>
             <p className="text-lg mb-8 opacity-90">
-              Contact our local team for a free consultation and detailed
-              estimate
+              Contact our local remodeling contractors for a free consultation and detailed estimate.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-primary px-8 py-3 rounded-lg hover:bg-gray-100 transition font-semibold">

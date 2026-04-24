@@ -18,12 +18,12 @@ import SubServices from "@/components/sub-services";
 import { bathroomServices } from "@/lib/bathroom-services";
 
 export const metadata: Metadata = {
-  title: "Bathtub Remodeling Chandler AZ | Soaking Tubs",
-  description: "Professional bathtub remodeling Chandler AZ. Upgrade to a luxury soaking tub or freestanding bath. Browse our portfolio and get a quote!",
-  keywords: ["bathtub remodeling Chandler", "bathtub to shower conversion Chandler AZ", "bathtub to shower conversion cost Chandler AZ", "bathtub to shower conversion price Chandler AZ", "bathtub to shower conversion professional Chandler AZ", "affordable bathtub to shower conversion Chandler AZ", "bathtub to shower conversion estimate Chandler AZ", "bathtub to shower conversion near me Chandler AZ", "bathtub to shower conversion services Chandler AZ", "hire bathtub to shower conversion Chandler AZ", "company bathtub to shower conversion Chandler AZ"],
+  title: "Bathtub Remodeling Services in Chandler AZ | Local Contractors",
+  description: "Professional bathtub remodeling services in Chandler AZ. Upgrade to a luxury soaking tub or freestanding bath. Browse our portfolio and get a quote!",
+  keywords: ["bathtub remodeling services Chandler", "tub replacement contractors AZ", "freestanding bath installation company", "soaking tub upgrades", "Chandler bathroom contractors", "bathtub to shower conversion services"],
   openGraph: {
     title: "Bathtub to Shower Conversion Chandler AZ | Best",
-    description: "Best bathtub to shower conversion Chandler AZ. Affordable bathtub remodeling services!",
+    description: "Best bathtub to shower conversion Chandler AZ. Affordable tub replacement services!",
     url: `${siteConfig.url}/bathtub-remodeling`,
     type: "website",
     images: [
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Bathtub to Shower Conversion Chandler AZ | Best",
-    description: "Best bathtub to shower conversion Chandler AZ. Affordable bathtub remodeling!",
+    description: "Best bathtub to shower conversion Chandler AZ. Premium bath upgrades!",
     images: [`${siteConfig.url}/images/bathtub-remodeling-hero.jpg`],
   },
   alternates: {
@@ -63,16 +63,16 @@ export default function BathtubRemodelingPage() {
     <>
       <ServiceSchema
         serviceName="Bathtub Remodeling in Chandler, Arizona"
-        serviceDescription="Expert bathtub remodeling in Chandler, Arizona. Modern tub installations, luxury upgrades, and professional renovations."
+        serviceDescription="Expert tub replacements in Chandler, Arizona. Modern installations, luxury upgrades, and professional renovations."
         serviceUrl={`${siteConfig.url}/bathtub-remodeling`}
       />
       <FAQSchema faqs={faqs} />
       <Header />
       <main>
         <ServiceHero
-          title="Bathtub to Shower Conversion Chandler AZ"
-          subtitle="Best Bathtub to Shower Conversion Services Chandler AZ"
-          description="Professional bathtub to shower conversion Chandler AZ. Affordable bathtub to shower conversion cost, best bathtub remodeling services. Hire bathtub to shower conversion contractor near me!"
+          title="Bathtub Remodeling Services in Chandler AZ"
+          subtitle="Top-Rated Conversion & Tub Replacement Contractors"
+          description="Transform your outdated bath into a spacious, modern shower. As your trusted local contractors, we provide affordable tub-to-shower conversion services, expert installations, and beautiful designs tailored to your home."
           image="/images/optimized/photo-1600566752355-35792bedcfea.webp"
           breadcrumbs={[
             { name: "Home", url: siteConfig.url },
@@ -81,15 +81,15 @@ export default function BathtubRemodelingPage() {
         />
 
         <ServiceProcess
-          title="Bathtub Remodeling Process"
-          subtitle="Our Process"
-          description="Professional bathtub remodeling with precise planning and quality installation for Chandler homeowners."
+          title="Our Renovation Process"
+          subtitle="How It Works"
+          description="A streamlined approach to upgrading your bathing space with precise planning and quality installation for Chandler homeowners."
           steps={[
             {
               number: "01",
               icon: "PhoneCall",
               title: "Design Consultation",
-              description: "We assess your space, discuss tub options, and plan the perfect bathtub remodeling solution.",
+              description: "We assess your space, discuss tub options, and plan the perfect upgrade solution.",
             },
             {
               number: "02",
@@ -101,7 +101,7 @@ export default function BathtubRemodelingPage() {
               number: "03",
               icon: "Hammer",
               title: "Removal & Prep",
-              description: "Careful removal of old tub, plumbing updates, and surface preparation for installation.",
+              description: "Careful removal of the old tub, plumbing updates, and surface preparation for installation.",
             },
             {
               number: "04",
@@ -113,40 +113,40 @@ export default function BathtubRemodelingPage() {
               number: "05",
               icon: "Sparkles",
               title: "Finishing Touches",
-              description: "Surround installation, trim work, and final testing to complete your bathtub remodeling.",
+              description: "Surround installation, trim work, and final testing to complete your new tub installation.",
             },
           ]}
         />
 
         <IssuesSolved
-          title="Issues We Solve with Bathtub Remodeling"
+          title="Issues We Solve with Tub Replacements"
           subtitle="Common Problems Fixed"
-          description="We address the most common bathtub remodeling challenges Chandler homeowners face."
+          description="We address the most common bathing area challenges Chandler homeowners face."
           issues={serviceData.issues}
         />
 
         <Benefits
-          title="Benefits of Bathtub Remodeling in Chandler"
+          title="Benefits of Upgrading Your Tub in Chandler"
           subtitle="Why It Matters"
           benefits={serviceData.benefits}
         />
 
         <Tips
-          title="Bathtub Remodeling Tips & Maintenance"
+          title="Tub Maintenance Tips"
           subtitle="Keep It Looking New"
-          description="Expert tips to maintain your newly remodeled bathtub and extend its lifespan."
+          description="Expert advice to maintain your newly installed tub and extend its lifespan."
           tips={serviceData.tips}
         />
 
         <ServiceCTA 
-          title="Ready for professional bathtub remodeling in Chandler?" 
-          description="Get expert design consultation, quality materials, and professional installation for your dream bathtub." 
+          title="Ready for a new tub installation in Chandler?" 
+          description="Get expert design consultation, quality materials, and professional installation for your dream bath." 
         />
 
         <SubServices 
           title="Other Bathroom Services in Chandler"
           subtitle="More Options"
-          description="Looking for something else? We offer a variety of bathroom remodeling solutions."
+          description="Looking for something else? We offer a variety of renovation solutions."
           services={otherServices.map(s => s.name)}
         />
 
@@ -161,14 +161,14 @@ export default function BathtubRemodelingPage() {
             <div>
               <span className="text-primary text-sm font-medium tracking-wider uppercase">Chandler, AZ</span>
               <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mt-4 mb-4 text-foreground text-balance">
-                Service Area Map for Bathtub Remodeling in Chandler, Arizona
+                Service Area Map for Tub Replacements in Chandler, Arizona
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                We serve homeowners across Chandler, Arizona with professional bathtub remodeling services, quality materials, and expert installation.
+                We serve homeowners across Chandler, Arizona with premium bath upgrade services, quality materials, and expert installation.
               </p>
               <ul className="space-y-2 text-foreground">
                 <li>• Chandler, AZ and surrounding areas</li>
-                <li>• Licensed and insured bathtub remodeling contractors</li>
+                <li>• Licensed and insured local contractors</li>
                 <li>• Free estimates and consultations available</li>
               </ul>
             </div>
@@ -177,7 +177,7 @@ export default function BathtubRemodelingPage() {
                 lat={chandlerLocation.lat}
                 lng={chandlerLocation.lng}
                 zoom={12}
-                title="Bathtub Remodeling in Chandler, AZ"
+                title="Tub Replacement in Chandler, AZ"
                 address="Chandler, Arizona"
               />
             </div>
@@ -185,8 +185,8 @@ export default function BathtubRemodelingPage() {
         </section>
 
         <ServiceCTA 
-          title="Need bathtub remodeling services in Chandler, AZ?" 
-          description="Contact us today for a free consultation and estimate on your bathtub remodeling project." 
+          title="Need a tub upgrade in Chandler, AZ?" 
+          description="Contact us today for a free consultation and estimate on your new bathing space." 
         />
       </main>
       <Footer />

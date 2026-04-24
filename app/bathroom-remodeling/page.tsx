@@ -15,12 +15,12 @@ import { siteConfig } from "@/lib/site-config";
 import { serviceContent } from "@/lib/service-content-data";
 
 export const metadata: Metadata = {
-  title: 'Bathroom Remodeling Services Chandler AZ | Best',
-  description: 'Best bathroom remodeling services Chandler AZ. Affordable bathroom remodeling cost, professional bathroom contractor. Free bathroom remodeling estimate!',
-  keywords: ['bathroom remodeling services Chandler AZ', 'affordable bathroom remodeling services Chandler AZ', 'professional bathroom remodeling services Chandler AZ', 'bathroom remodeling Chandler AZ', 'bathroom remodeling cost Chandler AZ', 'bathroom remodeling price Chandler AZ', 'bathroom remodeling estimate Chandler AZ', 'bathroom remodeling quote Chandler AZ', 'best bathroom remodeling Chandler AZ', 'bathroom remodeling company Chandler AZ', 'bathroom remodeling professional Chandler AZ', 'bathroom remodeling near me Chandler AZ', 'hire bathroom remodeling Chandler AZ', 'bathroom remodeling installation Chandler AZ'],
+  title: 'Bathroom Remodeling Services Chandler AZ | Best Contractors',
+  description: 'Top-rated bathroom remodeling in Chandler AZ. From master bath renovations to custom showers. Get a free design consultation and estimate today!',
+  keywords: ['bathroom remodeling Chandler AZ', 'custom bath renovations', 'master bath upgrades', 'Chandler remodeling contractors', 'bathroom design AZ', 'full bath renovations'],
   openGraph: {
-    title: 'Bathroom Remodeling Services Chandler AZ | Best',
-    description: 'Best bathroom remodeling services Chandler AZ. Affordable bathroom remodeling, free quotes!',
+    title: 'Bathroom Remodeling Services in Chandler AZ | Expert Contractors',
+    description: 'Transform your space with the best bathroom remodeling team in Chandler. Affordable, custom renovations!',
     url: `${siteConfig.url}/bathroom-remodeling`,
     images: [
       {
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Bathroom Remodeling Services Chandler AZ',
-    description: 'Best bathroom remodeling services Chandler AZ. Affordable, professional!',
+    description: 'Expert bathroom renovations in Chandler AZ. Affordable, professional!',
     images: [`${siteConfig.url}/images/bathroom-remodeling-chandler.jpg`],
   },
   alternates: {
@@ -51,33 +51,33 @@ export default function BathroomRemodelingPage() {
     <>
       <ServiceSchema
         serviceName="Bathroom Remodeling Services in Chandler, Arizona"
-        serviceDescription="Professional bathroom remodeling services including shower remodeling, bathtub installation, vanity installation, tile work, flooring, lighting, and complete bathroom renovations. Serving Chandler, Arizona and surrounding areas."
+        serviceDescription="Comprehensive renovation services including custom showers, bathtub installation, vanity upgrades, tile work, flooring, and complete bathroom makeovers. Serving Chandler, Arizona and surrounding areas."
         serviceUrl={`${siteConfig.url}/bathroom-remodeling`}
       />
       <FAQSchema faqs={serviceFaqs} />
       <Header />
       <main>
         <ServiceHero
-          title="Best Bathroom Remodeling Services Chandler AZ"
-          description="Looking for professional bathroom remodeling services Chandler AZ? Affordable bathroom remodeling services, bathroom remodeling company near me. Get your free bathroom remodeling estimate today!"
+          title="Bathroom Remodeling Services in Chandler AZ"
+          description="Looking to upgrade your space? We provide comprehensive bathroom remodeling services tailored to your style and budget. Connect with our local Chandler contractors for a free design consultation and estimate today!"
         />
         <SubServices />
         <IssuesSolved
-          title="Issues We Solve with Bathroom Remodeling"
-          subtitle="Common Problems Fixed"
-          description="We address the most common bathroom remodeling challenges Chandler homeowners face."
+          title="Common Bathroom Issues We Solve"
+          subtitle="Solutions for Your Space"
+          description="From outdated layouts to water damage, we address the most frequent challenges Chandler homeowners face with their washrooms."
           issues={bathRemodelData.issues}
         />
         <Benefits
-          title="Benefits of a Full Bathroom Remodel"
-          subtitle="Why Remodel Your Bathroom"
-          description="Discover how a complete bathroom remodeling transformation can improve your home's value and your quality of life."
+          title="Benefits of a Full Renovation"
+          subtitle="Why Upgrade Your Space"
+          description="Discover how a complete bathroom transformation can dramatically improve your home's value and your daily routine."
           benefits={bathRemodelData.benefits}
         />
         <Tips
-          title="Expert Bathroom Remodeling Tips"
+          title="Expert Renovation Tips"
           subtitle="Professional Insights"
-          description="Smart strategies to make the most of your bathroom remodeling project."
+          description="Smart strategies to make the most of your upcoming home improvement project."
           tips={bathRemodelData.tips}
         />
         <ProcessSection />

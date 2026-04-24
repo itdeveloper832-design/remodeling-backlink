@@ -8,12 +8,15 @@ import { LocalBusinessSchema, FAQSchema } from "@/components/seo/json-ld";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Best Bathroom Remodeling Chandler AZ | Free Quote",
-  description: "Top-rated bathroom remodeling Chandler AZ. Licensed experts delivering custom showers, tubs & full renovations. Get a free estimate today!",
+  title: "Bathroom Remodeling in Chandler AZ | Free Quote",
+  description: "Top-rated bathroom remodeling in Chandler AZ. Licensed experts delivering custom showers, tubs & full renovations. Get a free estimate today!",
   openGraph: {
-    title: "Best Bathroom Remodeling Chandler AZ",
-    description: "Top-rated bathroom remodeling Chandler AZ. Licensed experts delivering custom showers, tubs & full renovations. Get a free estimate today!",
+    title: "Bathroom Remodeling in Chandler AZ",
+    description: "Top-rated bathroom remodeling in Chandler AZ. Licensed experts delivering custom showers, tubs & full renovations. Get a free estimate today!",
     type: "website",
+  },
+  alternates: {
+    canonical: siteConfig.url,
   },
 };
 
@@ -73,7 +76,7 @@ const FinalCTA = dynamic(() => import("@/components/home/final-cta"), {
 
 const homeFaqs = [
   {
-    question: "What bathroom remodeling services do you offer in Chandler, AZ?",
+    question: "What types of bathroom remodeling in Chandler AZ do you offer?",
     answer:
       "We provide comprehensive bathroom remodeling in Chandler, including custom shower installations, bathtub replacements, vanity upgrades, and full master bath renovations. Our team handles everything from design to final plumbing and tile work.",
   },
@@ -83,9 +86,9 @@ const homeFaqs = [
       "Bathroom remodeling costs in Chandler typically range from $8,000 for basic refreshes to over $30,000 for luxury master suite transformations. We provide detailed, transparent estimates and flexible financing options to fit your budget.",
   },
   {
-    question: "Why choose ARZ Home Remodeling for my bathroom project?",
+    question: "Why choose ARZ Home Remodeling for my project?",
     answer:
-      "As a licensed and insured bathroom remodeling company with over 15 years of experience in Chandler, we prioritize quality craftsmanship and customer satisfaction. We are proud of our 5-star reputation and our commitment to finishing projects on time and within budget.",
+      "With over 15 years of experience specializing in bathroom remodeling in Chandler AZ, we prioritize quality craftsmanship and customer satisfaction. We are proud of our 5-star reputation and our commitment to finishing projects on time and within budget.",
   },
   {
     question: "How do I get started with my Chandler bathroom remodel?",

@@ -109,22 +109,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   })
 
-  // Blog posts - static list (can be updated manually)
-  const blogEntries = [
-    {
-      url: `${baseUrl}/blog`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
-  ]
-
   return [
     ...staticEntries,
     ...serviceEntries,
     ...areaEntries,
     ...dynamicAreaEntries,
     ...locationEntries,
-    ...blogEntries,
   ]
 }

@@ -35,27 +35,44 @@ export default function AdminDashboardPage() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    async function fetchData() {
-      const [leadsCount, postsCount, testimonialsCount, galleryCount, leads, posts] = await Promise.all([
-        getLeadsCount(),
+    async function fetchStaticData() {
+      const [postsCount, testimonialsCount, galleryCount, posts] = await Promise.all([
         getPostsCount(),
         getTestimonialsCount(),
         getGalleryCount(),
-        getRecentLeads(5),
         getRecentPosts(5)
       ])
       
-      setStats({
-        leads: leadsCount,
+      setStats(prev => ({
+        ...prev,
         posts: postsCount,
         testimonials: testimonialsCount,
         gallery: galleryCount
-      })
-      setRecentLeads(leads)
+      }))
       setRecentPosts(posts)
-      setLoading(false)
     }
-    fetchData()
+    
+    fetchStaticData()
+
+    import("firebase/firestore").then(({ collection, onSnapshot, query, orderBy }) => {
+      import("@/lib/firebase").then(({ db }) => {
+        const q = query(collection(db, "leads"), orderBy("createdAt", "desc"));
+        const unsubscribe = onSnapshot(q, (snapshot) => {
+          const leads = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })) as Lead[];
+          setStats(prev => ({
+            ...prev,
+            leads: leads.length
+          }))
+          setRecentLeads(leads.slice(0, 5));
+          setLoading(false);
+        }, (error) => {
+          console.error("Error fetching leads real-time on dashboard:", error);
+          setLoading(false);
+        });
+
+        return () => unsubscribe();
+      });
+    });
   }, [])
 
   const statCards = [

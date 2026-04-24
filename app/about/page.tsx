@@ -5,16 +5,16 @@ import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
 import { siteConfig } from "@/lib/site-config"
 import { Button } from "@/components/ui/button"
-import { Award, Users, Clock, Shield, CheckCircle2, ArrowRight, Phone, Pencil, Hammer, Sparkles, Star } from "lucide-react"
+import { Award, Users, Clock, Shield, CheckCircle2, ArrowRight, Phone, Pencil, Hammer, Sparkles } from "lucide-react"
 import { BreadcrumbSchema, FAQSchema } from "@/components/seo/json-ld"
 
 export const metadata: Metadata = {
-  title: "Trusted Bathroom Remodelers Chandler AZ | ARZ",
-  description: "Local, licensed bathroom remodelers in Chandler AZ. Over 15 years building luxury baths with guaranteed satisfaction. Read our story!",
-  keywords: ["bathroom remodelers Chandler", "bathroom renovation Chandler AZ", "bathroom renovation contractor Chandler AZ", "bathroom renovation cost Chandler AZ", "bathroom renovation price Chandler AZ", "bathroom renovation near me Chandler AZ", "bathroom renovation professional Chandler AZ", "bathroom renovation hire Chandler AZ", "bathroom renovation company Chandler AZ", "bathroom renovation services Chandler AZ", "best bathroom renovation Chandler AZ", "bathroom renovation quote Chandler AZ", "bathroom renovation estimate Chandler AZ"],
+  title: "Trusted Bathroom Remodeling Contractor Chandler AZ | ARZ",
+  description: "Local, licensed bathroom remodeling contractor in Chandler AZ. Over 15 years building luxury baths with guaranteed satisfaction. Read our story!",
+  keywords: ["bathroom remodeling contractor", "Chandler AZ remodelers", "bathroom renovation Chandler", "local remodeling company", "custom bathrooms AZ"],
   openGraph: {
-    title: "Bathroom Renovation Contractor Chandler AZ | Best",
-    description: "Best bathroom renovation contractor Chandler AZ. Professional bathroom renovation!",
+    title: "Bathroom Remodeling Contractor Chandler AZ | ARZ Home Remodeling",
+    description: "Expert bathroom remodeling contractor Chandler AZ. Professional, high-quality renovations!",
     url: `${siteConfig.url}/about`,
     type: "website",
     images: [
@@ -28,8 +28,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bathroom Renovation Contractor Chandler AZ | Best",
-    description: "Best bathroom renovation contractor Chandler AZ. Professional, affordable!",
+    title: "Bathroom Remodeling Contractor Chandler AZ",
+    description: "Professional bathroom remodeling contractor Chandler AZ. Affordable luxury renovations!",
     images: [`${siteConfig.url}/og-image.jpg`],
   },
   alternates: {
@@ -69,20 +69,16 @@ const milestones = [
 
 const aboutFaqs = [
   {
-    question: "Are you the best bathroom renovation contractor in Chandler AZ?",
-    answer: "Yes! We're the best bathroom renovation contractor in Chandler AZ with 15+ years experience. Our professional bathroom renovation services have completed 500+ projects with 100% satisfaction rate. Bathroom renovation company near me!"
+    question: "Why should I hire a professional bathroom remodeling contractor?",
+    answer: "A professional bathroom remodeling contractor ensures your project meets all building codes, handles complex plumbing and electrical work safely, and delivers high-quality finishes that increase your home's value."
   },
   {
-    question: "What is the bathroom renovation cost in Chandler AZ?",
-    answer: "Bathroom renovation cost in Chandler AZ varies by scope. Our affordable bathroom renovation services include transparent pricing. Get your free bathroom renovation quote and bathroom renovation estimate today!"
+    question: "How much does a bathroom remodel cost in Chandler AZ?",
+    answer: "Costs vary depending on the scope of work. As an experienced bathroom remodeling contractor, we provide transparent pricing and free estimates tailored to your specific needs and budget."
   },
   {
-    question: "Do you offer professional bathroom renovation services in Chandler AZ?",
-    answer: "Yes! We offer professional bathroom renovation services in Chandler AZ. Hire bathroom renovation contractor for licensed and insured services. Bathroom renovation near me Chandler AZ with flexible financing!"
-  },
-  {
-    question: "How do I hire bathroom renovation contractor in Chandler AZ?",
-    answer: "To hire bathroom renovation contractor in Chandler AZ, contact us for free bathroom renovation estimate. Our bathroom renovation company services include consultation, design, and installation. Best bathroom renovation near me!"
+    question: "Are your remodeling services licensed and insured?",
+    answer: "Yes, we are a fully licensed and insured bathroom remodeling contractor in Chandler, AZ, providing you with complete peace of mind throughout your renovation journey."
   }
 ];
 
@@ -106,11 +102,11 @@ export default function AboutPage() {
                 Our Story
               </span>
               <h1 className="mt-4 text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-foreground text-balance">
-                Best Bathroom Renovation Contractor Chandler AZ
+                Top-Rated Bathroom Remodeling Contractor in Chandler AZ
               </h1>
               <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-                For over 15 years, we have been the best bathroom renovation contractor in Chandler AZ. Professional bathroom 
-                renovation services with affordable bathroom renovation cost. Hire bathroom renovation contractor near me today!
+                For over 15 years, we have served as a trusted bathroom remodeling contractor in Chandler. 
+                We combine quality craftsmanship with affordable pricing to bring your dream bathroom to life.
               </p>
             </div>
           </div>
@@ -161,14 +157,14 @@ export default function AboutPage() {
                   Building Dream Spaces Since 2010
                 </h2>
                 <p className="mt-6 text-muted-foreground leading-relaxed">
-                  ARZ Home Remodeling was founded as the premier bathroom remodeling company in Chandler, Arizona. 
+                  ARZ Home Remodeling was founded with a simple goal: to be the most reliable bathroom remodeling contractor in Chandler, Arizona. 
                   We help homeowners create beautiful, functional bathrooms they love. What started as a small 
-                  family business has grown into Chandler&apos;s most trusted bathroom renovation company with 500+ completed projects.
+                  family business has grown into Chandler&apos;s most trusted renovation company with 500+ completed projects.
                 </p>
                 <p className="mt-4 text-muted-foreground leading-relaxed">
-                  Our experienced bathroom remodelers combine traditional techniques with modern 
-                  innovation to deliver exceptional results. As licensed bathroom contractors in Chandler, AZ, 
-                  we take a personalized approach to every bathroom remodel, ensuring premium quality and customer satisfaction.
+                  Our experienced team combines traditional techniques with modern 
+                  innovation to deliver exceptional results. As a licensed bathroom remodeling contractor, 
+                  we take a personalized approach to every project, ensuring premium quality and customer satisfaction.
                 </p>
                 <ul className="mt-6 space-y-3">
                   {["Family-owned and operated", "Local Chandler, AZ business", "Experienced design team", "Premium materials only"].map((item) => (
@@ -224,7 +220,7 @@ export default function AboutPage() {
                 How We Work
               </h2>
               <p className="mt-4 text-muted-foreground">
-                Our streamlined process ensures a stress-free remodeling experience from start to finish
+                Our streamlined process ensures a stress-free remodeling experience from start to finish.
               </p>
             </div>
             
@@ -233,22 +229,22 @@ export default function AboutPage() {
                 {
                   icon: Phone,
                   title: "Free Consultation",
-                  description: "Schedule your complimentary in-home consultation to discuss your vision"
+                  description: "Schedule your complimentary in-home consultation to discuss your vision."
                 },
                 {
                   icon: Pencil,
                   title: "Design & Planning",
-                  description: "Our design team creates detailed plans with 3D renderings of your space"
+                  description: "Our design team creates detailed plans with 3D renderings of your space."
                 },
                 {
                   icon: Hammer,
                   title: "Expert Construction",
-                  description: "Skilled craftsmen execute every detail with precision and quality materials"
+                  description: "Skilled craftsmen execute every detail with precision and quality materials."
                 },
                 {
                   icon: Sparkles,
                   title: "Final Walkthrough",
-                  description: "We ensure every detail exceeds expectations before handoff"
+                  description: "We ensure every detail exceeds expectations before handoff."
                 }
               ].map((step, index) => (
                 <div key={index} className="text-center">
@@ -278,7 +274,7 @@ export default function AboutPage() {
                 Award-Winning Quality
               </h2>
               <p className="mt-4 text-muted-foreground">
-                Recognized for excellence in craftsmanship and customer satisfaction
+                Recognized for excellence in craftsmanship and customer satisfaction.
               </p>
             </div>
             

@@ -17,12 +17,12 @@ import SubServices from "@/components/sub-services";
 import { bathroomServices } from "@/lib/bathroom-services";
 
 export const metadata: Metadata = {
-  title: "Custom Shower Remodeling Chandler AZ | Fast Install",
-  description: "Premium shower remodeling Chandler AZ. Walk-in showers, custom tiling, and glass enclosures built to last. Call for a free consultation!",
-  keywords: ["shower remodeling Chandler", "shower remodel services Chandler AZ", "shower remodel Chandler AZ", "shower remodel cost Chandler AZ", "shower remodel price Chandler AZ", "shower remodel estimate Chandler AZ", "shower remodel quote Chandler AZ", "shower remodel contractor Chandler AZ", "shower remodel company Chandler AZ", "affordable shower remodel Chandler AZ", "best shower remodel Chandler AZ", "professional shower remodel Chandler AZ", "shower remodel near me Chandler AZ", "hire shower remodel Chandler AZ", "shower remodel installation Chandler AZ"],
+  title: "Shower Remodeling Services in Chandler AZ | Local Contractors",
+  description: "Premium shower remodeling services and contractors in Chandler AZ. Walk-in showers, custom tiling, and glass enclosures built to last. Call for a free consultation!",
+  keywords: ["shower remodeling services Chandler", "custom tile contractors AZ", "frameless glass enclosures company", "shower upgrades", "bathroom renovation Chandler contractors", "walk-in showers"],
   openGraph: {
-    title: "Shower Remodel Chandler AZ | Best Services",
-    description: "Best shower remodel services Chandler AZ. Affordable shower remodel, free quotes!",
+    title: "Shower Upgrades in Chandler AZ | Premium Services",
+    description: "Expert shower upgrades in Chandler AZ. Affordable luxury, free quotes!",
     url: `${siteConfig.url}/shower-remodeling`,
     type: "website",
     images: [
@@ -30,14 +30,14 @@ export const metadata: Metadata = {
         url: `${siteConfig.url}/images/shower-remodeling-hero.jpg`,
         width: 1200,
         height: 630,
-        alt: "Shower Remodeling - Chandler Bathroom Remodeling",
+        alt: "Custom Showers - Chandler Bathroom Upgrades",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shower Remodel Chandler AZ | Best Services",
-    description: "Best shower remodel services Chandler AZ. Affordable, professional!",
+    title: "Shower Upgrades in Chandler AZ | Premium Services",
+    description: "Expert shower upgrades in Chandler AZ. Affordable, professional!",
     images: [`${siteConfig.url}/images/shower-remodeling-hero.jpg`],
   },
   alternates: {
@@ -58,16 +58,16 @@ export default function ShowerRemodelingPage() {
     <>
       <ServiceSchema
         serviceName="Shower Remodeling in Chandler, Arizona"
-        serviceDescription="Professional shower remodeling in Chandler, Arizona. Custom tile, frameless glass enclosures, waterproof installations, and premium fixtures."
+        serviceDescription="Professional shower upgrades in Chandler, Arizona. Custom tile, frameless glass enclosures, waterproof installations, and premium fixtures."
         serviceUrl={`${siteConfig.url}/shower-remodeling`}
       />
       <FAQSchema faqs={faqs} />
       <Header />
       <main>
         <ServiceHero
-          title="Best Shower Remodel Services Chandler AZ"
-          subtitle="Professional Shower Remodel Contractor Chandler AZ"
-          description="Best shower remodel services Chandler AZ. Affordable shower remodel cost, professional shower remodel installation, shower remodel contractor. Get your free shower remodel estimate today!"
+          title="Shower Remodeling Services in Chandler AZ"
+          subtitle="Premium Custom Shower Installations & Upgrades"
+          description="Transform your daily routine with a stunning new shower. As your trusted local contractors, we provide elegant frameless glass designs, custom tile work, and professional shower remodeling services tailored to your home."
           image="/images/optimized/photo-1552321554-5fefe8c9ef14.webp"
           breadcrumbs={[
             { name: "Home", url: siteConfig.url },
@@ -76,15 +76,15 @@ export default function ShowerRemodelingPage() {
         />
 
         <ServiceProcess
-          title="Shower Remodel Process"
-          subtitle="Our Process"
-          description="A streamlined, mess-managed shower remodel built for Chandler homeowners who want a faster, cleaner upgrade."
+          title="Our Installation Process"
+          subtitle="How We Work"
+          description="A streamlined, mess-managed approach built for Chandler homeowners who want a faster, cleaner upgrade."
           steps={[
             {
               number: "01",
               icon: "PhoneCall",
               title: "Consultation & Measurements",
-              description: "We review goals, measure your shower footprint, and plan waterproofing details.",
+              description: "We review goals, measure your existing footprint, and plan waterproofing details.",
             },
             {
               number: "02",
@@ -114,35 +114,35 @@ export default function ShowerRemodelingPage() {
         />
 
         <IssuesSolved
-          title="Issues We Solve with Shower Remodeling"
+          title="Issues We Solve with Custom Showers"
           subtitle="Common Problems Fixed"
-          description="We address the most common shower remodeling challenges Chandler homeowners face."
+          description="We address the most common bathing area challenges Chandler homeowners face."
           issues={showerData.issues}
         />
 
         <Benefits
-          title="Benefits of Shower Remodeling"
-          subtitle="Why Remodel Your Shower"
-          description="Discover how professional shower remodeling transforms your daily routine and adds value to your home."
+          title="Benefits of Upgrading Your Shower"
+          subtitle="Why It Matters"
+          description="Discover how professional updates transform your daily routine and add value to your home."
           benefits={showerData.benefits}
         />
 
         <Tips
-          title="Expert Shower Remodeling Tips"
+          title="Expert Maintenance Tips"
           subtitle="Professional Insights"
-          description="Smart strategies to make the most of your shower remodeling project."
+          description="Smart strategies to make the most of your newly upgraded bathing space."
           tips={showerData.tips}
         />
 
         <ServiceCTA 
           title="Ready for a Chandler shower remodel that stays watertight?" 
-          description="Get a custom shower plan, tile selections, and a clean installation schedule tailored to your home." 
+          description="Get a custom design plan, tile selections, and a clean installation schedule tailored to your home." 
         />
 
         <SubServices 
           title="Explore Other Bathroom Services"
           subtitle="More Solutions"
-          description="We offer a full range of bathroom remodeling services beyond just showers."
+          description="We offer a full range of renovation services beyond just showers."
           services={otherServices.map(s => s.name)}
         />
 
@@ -153,8 +153,8 @@ export default function ShowerRemodelingPage() {
         <ContactSection />
 
         <ServiceCTA 
-          title="Need fast shower remodeling in Chandler, AZ?" 
-          description="Call now for a same-week consultation and clear pricing on your new shower." 
+          title="Need fast shower upgrades in Chandler, AZ?" 
+          description="Call now for a same-week consultation and clear pricing on your new enclosure." 
         />
       </main>
       <Footer />

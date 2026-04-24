@@ -67,7 +67,7 @@ export default function BathroomSection() {
               Expert Bathroom Remodeling in Chandler, Arizona
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Your bathroom should be a sanctuary. Our comprehensive remodeling services transform 
+              Your bathroom should be a sanctuary. Our comprehensive remodeling approach transforms 
               outdated spaces into stunning retreats that combine functionality with timeless elegance. 
               From walk-in showers to complete renovations, we bring your vision to life.
             </p>

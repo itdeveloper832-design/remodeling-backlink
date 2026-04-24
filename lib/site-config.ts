@@ -29,9 +29,10 @@ export const siteConfig = {
   },
   navigation: [
     { name: "Home", href: "/" },
-    { name: "Services", href: "/services" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
+    { name: "Services", href: "/services" },
+    { name: "Blog", href: "/blog" },
   ],
   serviceAreas: [
     "Chandler",
