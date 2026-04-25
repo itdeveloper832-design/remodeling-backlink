@@ -1,6 +1,4 @@
-"use client";
-
-import { useParams, notFound } from "next/navigation";
+import { notFound } from "next/navigation";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import ServiceHero from "@/components/service-hero";
@@ -12,12 +10,22 @@ import AreaBenefits from "@/components/area-benefits";
 import CustomFAQ from "@/components/custom-faq";
 import { ServiceSchema, FAQSchema } from "@/components/seo/json-ld";
 import { siteConfig } from "@/lib/site-config";
-import { getAreaData } from "@/lib/bathroom-remodeling-areas";
+import { getAreaData, getAllAreaSlugs } from "@/lib/bathroom-remodeling-areas";
 import AreaInterlinking from "@/components/area-interlinking";
 
-export default function AreaPage() {
-  const params = useParams();
-  const areaSlug = params.area as string;
+export async function generateStaticParams() {
+  const slugs = getAllAreaSlugs();
+  return slugs.map((slug) => ({
+    area: slug,
+  }));
+}
+
+export default async function AreaPage({
+  params,
+}: {
+  params: Promise<{ area: string }>;
+}) {
+  const { area: areaSlug } = await params;
 
   const areaData = getAreaData(areaSlug);
 

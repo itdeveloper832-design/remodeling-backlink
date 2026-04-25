@@ -1291,6 +1291,12 @@ const chandlerLocation = {
   lng: -111.8413,
 };
 
+export async function generateStaticParams() {
+  return bathroomServices.map((service) => ({
+    service: service.href.replace("/", ""),
+  }));
+}
+
 export default async function BathroomServicePage({
   params,
 }: {

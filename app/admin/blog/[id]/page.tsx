@@ -24,6 +24,12 @@ interface BlogEditorPageProps {
   params: Promise<{ id: string }>
 }
 
+export async function generateStaticParams() {
+  return [
+    { id: "new" }
+  ];
+}
+
 export default function BlogEditorPage({ params }: BlogEditorPageProps) {
   const { id } = use(params)
   const router = useRouter()
