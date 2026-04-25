@@ -164,7 +164,7 @@ export default function AdminDashboardPage() {
             <CardTitle className="text-lg font-serif">Recent Posts</CardTitle>
             <div className="flex items-center gap-2">
               <Button asChild variant="outline" size="sm">
-                <Link href="/admin/blog/new">
+                <Link href="/admin/blog/edit?id=new">
                   <Plus className="mr-1 h-4 w-4" /> New Post
                 </Link>
               </Button>
@@ -192,7 +192,7 @@ export default function AdminDashboardPage() {
               <div className="text-center py-8">
                 <p className="text-sm text-muted-foreground mb-4">No posts yet</p>
                 <Button asChild size="sm">
-                  <Link href="/admin/blog/new">
+                  <Link href="/admin/blog/edit?id=new">
                     <Plus className="mr-1 h-4 w-4" /> Create First Post
                   </Link>
                 </Button>
@@ -202,7 +202,7 @@ export default function AdminDashboardPage() {
                 {recentPosts.map((post) => (
                   <Link 
                     key={post.id} 
-                    href={`/admin/blog/${post.id}`}
+                    href={`/admin/blog/edit?id=${post.id}`}
                     className="flex items-center gap-4 group"
                   >
                     <div className="h-10 w-10 bg-secondary rounded flex items-center justify-center">

@@ -58,7 +58,7 @@ export default function AdminBlogPage() {
       description="Create and manage blog articles"
       actions={
         <Button asChild>
-          <Link href="/admin/blog/new">
+          <Link href="/admin/blog/edit?id=new">
             <Plus className="mr-2 h-4 w-4" />
             New Post
           </Link>
@@ -73,7 +73,7 @@ export default function AdminBlogPage() {
             <div className="p-8 text-center">
               <p className="text-muted-foreground mb-4">No posts yet</p>
               <Button asChild>
-                <Link href="/admin/blog/new">
+                <Link href="/admin/blog/edit?id=new">
                   <Plus className="mr-2 h-4 w-4" />
                   Create First Post
                 </Link>
@@ -134,7 +134,7 @@ export default function AdminBlogPage() {
                         </DropdownMenuTrigger>
                         <DropdownMenuContent align="end">
                           <DropdownMenuItem asChild>
-                            <Link href={`/admin/blog/${post.id}`}>
+                            <Link href={`/admin/blog/edit?id=${post.id}`}>
                               <Pencil className="mr-2 h-4 w-4" /> Edit
                             </Link>
                           </DropdownMenuItem>
