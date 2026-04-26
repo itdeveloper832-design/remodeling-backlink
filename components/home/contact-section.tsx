@@ -30,7 +30,7 @@ export default function ContactSection() {
     e.preventDefault();
     setIsSubmitting(true);
     setError("");
-    
+
     const formData = new FormData(e.currentTarget);
     const data = {
       name: formData.get("name") as string,
@@ -43,19 +43,19 @@ export default function ContactSection() {
 
     try {
       const result = await createLead(data);
-      
+
       if (!result.success) {
-        throw new Error(result.error);
+        throw new Error(result.error || "Submission failed");
       }
 
       console.info("Contact form submission successful", data);
       setIsSubmitted(true);
       e.currentTarget.reset();
-    } catch (error) {
-      console.error("Error submitting contact form:", error);
+    } catch (err) {
+      console.error("Error submitting contact form:", err);
       setError("Failed to submit form. Please try again or call us directly.");
     }
-    
+
     setIsSubmitting(false);
   };
 
@@ -76,7 +76,7 @@ export default function ContactSection() {
               Ready to Start Your Project?
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-10">
-              Get in touch with our team to schedule your free consultation. We'll 
+              Get in touch with our team to schedule your free consultation. We&apos;ll
               discuss your vision, answer your questions, and provide a detailed estimate.
             </p>
 
@@ -152,9 +152,9 @@ export default function ContactSection() {
                     Thank You!
                   </h3>
                   <p className="text-muted-foreground mb-4">
-                    We've received your message and will get back to you within 24 hours.
+                    We&apos;ve received your message and will get back to you within 24 hours.
                   </p>
-                  <Button 
+                  <Button
                     onClick={() => setIsSubmitted(false)}
                     variant="outline"
                   >
@@ -167,15 +167,15 @@ export default function ContactSection() {
                     Get Your Free Estimate
                   </h3>
                   <p className="text-muted-foreground mb-8">
-                    Fill out the form below and we'll be in touch shortly.
+                    Fill out the form below and we&apos;ll be in touch shortly.
                   </p>
 
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <Label htmlFor="name">Full Name</Label>
+                        <Label htmlFor="contact-name">Full Name</Label>
                         <Input
-                          id="name"
+                          id="contact-name"
                           name="name"
                           placeholder="John Smith"
                           required
@@ -183,9 +183,9 @@ export default function ContactSection() {
                         />
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="phone">Phone Number</Label>
+                        <Label htmlFor="contact-phone">Phone Number</Label>
                         <Input
-                          id="phone"
+                          id="contact-phone"
                           name="phone"
                           type="tel"
                           placeholder="(229) 306-5591"
@@ -196,9 +196,9 @@ export default function ContactSection() {
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="email">Email Address</Label>
+                      <Label htmlFor="contact-email">Email Address</Label>
                       <Input
-                        id="email"
+                        id="contact-email"
                         name="email"
                         type="email"
                         placeholder="john@example.com"
@@ -208,9 +208,9 @@ export default function ContactSection() {
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="service">Service Interested In</Label>
+                      <Label htmlFor="contact-service">Service Interested In</Label>
                       <Select name="service" required>
-                        <SelectTrigger className="bg-background">
+                        <SelectTrigger className="bg-background" id="contact-service">
                           <SelectValue placeholder="Select a service" />
                         </SelectTrigger>
                         <SelectContent>
@@ -225,9 +225,9 @@ export default function ContactSection() {
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="message">Tell Us About Your Project</Label>
+                      <Label htmlFor="contact-message">Tell Us About Your Project</Label>
                       <Textarea
-                        id="message"
+                        id="contact-message"
                         name="message"
                         placeholder="Describe your project goals, timeline, and any specific requirements..."
                         rows={4}
