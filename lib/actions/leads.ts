@@ -12,6 +12,25 @@ export async function createLead(
       status: "new",
       createdAt: new Date().toISOString(),
     });
+
+    // Trigger email notification
+    await addDoc(collection(db, "mail"), {
+      to: "sales@arzhomeremodeling.com",
+      message: {
+        subject: `New Lead: ${data.name}`,
+        html: `
+          <h3>New Lead Received</h3>
+          <p><strong>Name:</strong> ${data.name}</p>
+          <p><strong>Phone:</strong> ${data.phone}</p>
+          <p><strong>Email:</strong> ${data.email}</p>
+          <p><strong>Service:</strong> ${data.service}</p>
+          <p><strong>Message:</strong> ${data.message}</p>
+          <hr />
+          <p>This lead has been saved to your admin dashboard.</p>
+        `,
+      },
+    });
+
     return { success: true, id: docRef.id };
   } catch (error: any) {
     return { success: false, error: error.message };

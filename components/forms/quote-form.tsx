@@ -44,6 +44,26 @@ export function QuoteForm() {
 
     try {
       await addDoc(collection(db, "leads"), data);
+      
+      // Trigger email notification
+      await addDoc(collection(db, "mail"), {
+        to: "sales@arzhomeremodeling.com",
+        message: {
+          subject: `New Quote Request: ${data.name}`,
+          html: `
+            <h3>New Quote Request Received</h3>
+            <p><strong>Name:</strong> ${data.name}</p>
+            <p><strong>Phone:</strong> ${data.phone}</p>
+            <p><strong>Email:</strong> ${data.email}</p>
+            <p><strong>ZIP Code:</strong> ${data.zip}</p>
+            <p><strong>Service:</strong> ${data.service}</p>
+            <p><strong>Message:</strong> ${data.message}</p>
+            <hr />
+            <p>This request has been saved to your admin dashboard.</p>
+          `,
+        },
+      });
+
       console.info("Quote form submission successful", data);
       setSuccess(true);
       e.currentTarget.reset();

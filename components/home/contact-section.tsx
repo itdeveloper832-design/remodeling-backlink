@@ -45,6 +45,25 @@ export default function ContactSection() {
 
     try {
       await addDoc(collection(db, "leads"), data);
+
+      // Trigger email notification
+      await addDoc(collection(db, "mail"), {
+        to: "sales@arzhomeremodeling.com",
+        message: {
+          subject: `New Contact Form Submission: ${data.name}`,
+          html: `
+            <h3>New Contact Form Submission</h3>
+            <p><strong>Name:</strong> ${data.name}</p>
+            <p><strong>Phone:</strong> ${data.phone}</p>
+            <p><strong>Email:</strong> ${data.email}</p>
+            <p><strong>Service:</strong> ${data.service}</p>
+            <p><strong>Message:</strong> ${data.message}</p>
+            <hr />
+            <p>This message has been saved to your admin dashboard.</p>
+          `,
+        },
+      });
+
       console.info("Contact form submission successful", data);
       setIsSubmitted(true);
       e.currentTarget.reset();

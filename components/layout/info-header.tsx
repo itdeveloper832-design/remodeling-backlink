@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Phone, Briefcase, Tag } from "lucide-react";
+import { Phone, Mail, Briefcase, Tag } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
 
 export function InfoHeader() {
@@ -15,6 +15,14 @@ export function InfoHeader() {
           >
             <Phone className="w-4 h-4" />
             <span className="hidden sm:inline">{siteConfig.phone}</span>
+          </a>
+
+          <a 
+            href={`mailto:${siteConfig.email}`}
+            className="flex items-center gap-2 hover:text-primary transition-colors"
+          >
+            <Mail className="w-4 h-4" />
+            <span className="hidden sm:inline">{siteConfig.email}</span>
           </a>
           
           <Link 

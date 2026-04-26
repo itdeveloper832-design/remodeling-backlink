@@ -10,7 +10,7 @@
  *   node scripts/generate-admin-password.js
  * 
  * Then copy the output hash and add it to your .env.local file:
- *   ADMIN_EMAIL=malanhans777@gmail.com
+ *   ADMIN_EMAIL=sales@arzhomeremodeling.com
  *   ADMIN_PASSWORD_HASH=<paste-the-hash-here>
  *   PASSWORD_SALT=<paste-the-salt-here>
  */

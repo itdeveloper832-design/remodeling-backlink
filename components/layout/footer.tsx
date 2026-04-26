@@ -163,12 +163,12 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-primary shrink-0" />
-                <Link
-                  href="/contact"
+                <a
+                  href={`mailto:${siteConfig.email}`}
                   className="text-background/70 hover:text-primary transition-colors text-sm"
                 >
-                  Send us an Email
-                </Link>
+                  {siteConfig.email}
+                </a>
               </li>
               <li className="flex items-start gap-3">
                 <Clock className="w-5 h-5 text-primary mt-0.5 shrink-0" />
