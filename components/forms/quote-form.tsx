@@ -45,7 +45,7 @@ export function QuoteForm() {
     try {
       await addDoc(collection(db, "leads"), data);
       
-      // Trigger email notification
+      // Send email notification via Firebase Trigger Email extension
       await addDoc(collection(db, "mail"), {
         to: "sales@arzhomeremodeling.com",
         message: {
@@ -55,11 +55,11 @@ export function QuoteForm() {
             <p><strong>Name:</strong> ${data.name}</p>
             <p><strong>Phone:</strong> ${data.phone}</p>
             <p><strong>Email:</strong> ${data.email}</p>
-            <p><strong>ZIP Code:</strong> ${data.zip}</p>
+            <p><strong>ZIP:</strong> ${data.zip}</p>
             <p><strong>Service:</strong> ${data.service}</p>
             <p><strong>Message:</strong> ${data.message}</p>
             <hr />
-            <p>This request has been saved to your admin dashboard.</p>
+            <p>This lead has been saved to your admin dashboard.</p>
           `,
         },
       });
