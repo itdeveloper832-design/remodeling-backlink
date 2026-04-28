@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Bathroom Contractor Chandler AZ | Free Quote",
     description: "Best bathroom contractor Chandler AZ. Hire bathroom contractor, free estimate!",
-    url: `${siteConfig.url}/contact`,
+    url: `${siteConfig.url}/contact/`,
     type: "website",
     images: [
       {
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     images: [`${siteConfig.url}/og-image.jpg`],
   },
   alternates: {
-    canonical: `${siteConfig.url}/contact`,
+    canonical: `${siteConfig.url}/contact/`,
   },
 }
 
@@ -60,8 +60,8 @@ export default function ContactPage() {
     <>
       <BreadcrumbSchema 
         items={[
-          { name: "Home", url: siteConfig.url },
-          { name: "Contact Us", url: `${siteConfig.url}/contact` }
+          { name: "Home", url: `${siteConfig.url}/` },
+          { name: "Contact Us", url: `${siteConfig.url}/contact/` }
         ]} 
       />
       <FAQSchema faqs={contactFaqs} />

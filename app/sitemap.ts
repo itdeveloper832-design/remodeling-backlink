@@ -1,7 +1,6 @@
 import { MetadataRoute } from 'next'
 import { siteConfig } from '@/lib/site-config'
 import { getAllAreaSlugs } from '@/lib/bathroom-remodeling-areas'
-import { generateAllLocationSlugs } from '@/lib/chandler-locations'
 
 export const dynamic = 'force-static'
 
@@ -23,7 +22,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ]
 
   const staticEntries = staticPages.map((page) => ({
-    url: `${baseUrl}${page.url}`,
+    // Trailing slash is required - Apache serves /page/ not /page for static exports
+    url: page.url === '' ? `${baseUrl}/` : `${baseUrl}${page.url}/`,
     lastModified: new Date(),
     changeFrequency: page.changeFrequency,
     priority: page.priority,
@@ -55,7 +55,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ]
 
   const serviceEntries = servicePages.map((page) => ({
-    url: `${baseUrl}${page.url}`,
+    url: `${baseUrl}${page.url}/`,
     lastModified: new Date(),
     changeFrequency: page.changeFrequency,
     priority: page.priority,
@@ -72,7 +72,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ]
 
   const areaEntries = areaPages.map((page) => ({
-    url: `${baseUrl}${page.url}`,
+    url: `${baseUrl}${page.url}/`,
     lastModified: new Date(),
     changeFrequency: page.changeFrequency,
     priority: page.priority,
@@ -81,40 +81,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Dynamic area pages from [area] route
   const areaSlugs = getAllAreaSlugs()
   const dynamicAreaEntries = areaSlugs.map((slug) => ({
-    url: `${baseUrl}/bathroom-remodeling-areas/${slug}`,
+    url: `${baseUrl}/bathroom-remodeling-areas/${slug}/`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.85,
   }))
 
-  // ===== NEW: Programmatic Local SEO Pages =====
-  // Generate all location-based pages dynamically
-  const locationSlugs = generateAllLocationSlugs()
-  const locationEntries = locationSlugs.map((slug) => {
-    let priority = 0.8 // Default for neighborhood pages
-    
-    // ZIP code pages get higher priority
-    if (/^\d{5}$/.test(slug)) {
-      priority = 0.85
-    }
-    // Combined pages (neighborhood-zip) get highest priority for local SEO
-    else if (/\d{5}$/.test(slug)) {
-      priority = 0.9
-    }
-
-    return {
-      url: `${baseUrl}/chandler-az-${slug}`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority,
-    }
-  })
+  // NOTE: chandler-az-[location] programmatic pages are intentionally excluded from
+  // the sitemap. Google flagged 66 of them as "Discovered - currently not indexed"
+  // which wastes crawl budget. These pages are noindexed via their own metadata.
 
   return [
     ...staticEntries,
     ...serviceEntries,
     ...areaEntries,
     ...dynamicAreaEntries,
-    ...locationEntries,
   ]
 }

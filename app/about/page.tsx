@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Bathroom Remodeling Contractor Chandler AZ | ARZ Home Remodeling",
     description: "Expert bathroom remodeling contractor Chandler AZ. Professional, high-quality renovations!",
-    url: `${siteConfig.url}/about`,
+    url: `${siteConfig.url}/about/`,
     type: "website",
     images: [
       {
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     images: [`${siteConfig.url}/og-image.jpg`],
   },
   alternates: {
-    canonical: `${siteConfig.url}/about`,
+    canonical: `${siteConfig.url}/about/`,
   },
 }
 
@@ -87,8 +87,8 @@ export default function AboutPage() {
     <>
       <BreadcrumbSchema 
         items={[
-          { name: "Home", url: siteConfig.url },
-          { name: "About Us", url: `${siteConfig.url}/about` }
+          { name: "Home", url: `${siteConfig.url}/` },
+          { name: "About Us", url: `${siteConfig.url}/about/` }
         ]} 
       />
       <FAQSchema faqs={aboutFaqs} />

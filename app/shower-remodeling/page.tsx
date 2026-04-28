@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     title: "Shower Remodeling Chandler AZ | Walk-In Showers & Custom Tile",
     description:
       "Expert shower remodeling in Chandler AZ. Walk-in showers, frameless glass, shower replacement. Licensed contractor. Free estimates!",
-    url: `${siteConfig.url}/shower-remodeling`,
+    url: `${siteConfig.url}/shower-remodeling/`,
     type: "website",
     images: [
       {
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     images: [`${siteConfig.url}/images/shower-remodeling-hero.jpg`],
   },
   alternates: {
-    canonical: `${siteConfig.url}/shower-remodeling`,
+    canonical: `${siteConfig.url}/shower-remodeling/`,
   },
 };
 
@@ -74,7 +74,7 @@ export default function ShowerRemodelingPage() {
       <ServiceSchema
         serviceName="Shower Remodeling in Chandler, Arizona"
         serviceDescription="Professional shower upgrades in Chandler, Arizona. Custom tile, frameless glass enclosures, waterproof installations, and premium fixtures."
-        serviceUrl={`${siteConfig.url}/shower-remodeling`}
+        serviceUrl={`${siteConfig.url}/shower-remodeling/`}
       />
       <FAQSchema faqs={faqs} />
       <Header />
@@ -85,8 +85,8 @@ export default function ShowerRemodelingPage() {
           description="Transform your outdated shower into a modern walk-in enclosure. Our Chandler shower remodeling team handles frameless glass, custom tile, curbless designs, and shower replacement with Schluter waterproofing rated for Arizona's climate."
           image="/images/optimized/photo-1552321554-5fefe8c9ef14.webp"
           breadcrumbs={[
-            { name: "Home", url: siteConfig.url },
-            { name: "Shower Remodeling Chandler AZ", url: `${siteConfig.url}/shower-remodeling` },
+            { name: "Home", url: `${siteConfig.url}/` },
+            { name: "Shower Remodeling Chandler AZ", url: `${siteConfig.url}/shower-remodeling/` },
           ]}
         />
 

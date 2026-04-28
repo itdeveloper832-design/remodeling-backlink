@@ -44,8 +44,14 @@ export async function generateMetadata({
     title,
     description,
     keywords: [`bathroom remodeling Chandler AZ`, `bathroom remodeling ${displayName}`, `bathroom remodel contractor`, `shower replacement ${displayName}`],
+    // noindex: these are thin programmatic pages; removing from sitemap + noindex
+    // prevents them from being "Discovered - currently not indexed" in GSC
+    robots: {
+      index: false,
+      follow: true,
+    },
     alternates: {
-      canonical: url,
+      canonical: `${siteConfig.url}/chandler-az-${resolvedParams.location}/`,
     },
   };
 }

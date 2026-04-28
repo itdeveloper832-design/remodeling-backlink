@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     title: "Bathtub Remodeling Chandler AZ | Tub Replacement & Conversion",
     description:
       "Expert bathtub remodeling in Chandler AZ. Tub replacement, tub-to-shower conversion, soaking tub installation. Free estimates!",
-    url: `${siteConfig.url}/bathtub-remodeling`,
+    url: `${siteConfig.url}/bathtub-remodeling/`,
     type: "website",
     images: [
       {
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     images: [`${siteConfig.url}/images/bathtub-remodeling-hero.jpg`],
   },
   alternates: {
-    canonical: `${siteConfig.url}/bathtub-remodeling`,
+    canonical: `${siteConfig.url}/bathtub-remodeling/`,
   },
 };
 

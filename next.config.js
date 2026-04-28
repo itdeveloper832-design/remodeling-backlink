@@ -3,6 +3,10 @@ const nextConfig = {
   // Output configuration - 'standalone' for cPanel, 'export' for static hosts
   output: 'export',
 
+  // Trailing slash ensures static export URLs match canonical tags
+  // Apache serves /page/ (with slash) for index.html files, so canonicals must match
+  trailingSlash: true,
+
   // Image Optimization - disable for static export
   images: {
     unoptimized: true,
