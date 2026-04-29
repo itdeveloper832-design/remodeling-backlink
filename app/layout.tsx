@@ -98,7 +98,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://www.google-analytics.com" />
 
         {/* Preload critical LCP image - Fetch Priority for 2024 standards */}
-        <link rel="preload" fetchPriority="high" href="/images/optimized/photo-1552321554-5fefe8c9ef14.webp" as="image" type="image/webp" />
+        <link rel="preload" fetchPriority="high" href="/images/optimized/photo-1620626011761-996317b8d101.webp" as="image" type="image/webp" />
 
         {/* Additional SEO meta tags */}
         <meta name="geo.region" content="US-AZ" />

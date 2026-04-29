@@ -6,6 +6,7 @@ import Hero from "@/components/home/hero";
 import TrustBadges from "@/components/home/trust-badges";
 import { LocalBusinessSchema, FAQSchema } from "@/components/seo/json-ld";
 import { siteConfig } from "@/lib/site-config";
+import { ClientWrapper } from "@/components/home/client-wrapper";
 
 export const metadata: Metadata = {
   title: "Bathroom Remodeling Chandler AZ | Licensed Contractors & Free Estimates",
@@ -32,8 +33,7 @@ export const metadata: Metadata = {
   },
 };
 
-// Lazy load below-the-fold components for better code splitting
-// Lazy load below-the-fold components for better code splitting
+// Optimized dynamic imports for below-the-fold content
 const AboutPreview = dynamic(() => import("@/components/home/about-preview"), { 
   loading: () => <div className="h-80 bg-muted animate-pulse" />
 });
@@ -43,13 +43,7 @@ const ServicesGrid = dynamic(() => import("@/components/home/services-grid"), {
 const WhyChooseUs = dynamic(() => import("@/components/home/why-choose-us"), { 
   loading: () => <div className="h-80 bg-muted animate-pulse" />
 });
-const Testimonials = dynamic(() => import("@/components/home/testimonials"), { 
-  loading: () => <div className="h-80 bg-muted animate-pulse" />
-});
 const BathroomSection = dynamic(() => import("@/components/home/bathroom-section"), { 
-  loading: () => <div className="h-80 bg-muted animate-pulse" />
-});
-const GalleryPreview = dynamic(() => import("@/components/home/gallery-preview"), { 
   loading: () => <div className="h-80 bg-muted animate-pulse" />
 });
 const ProcessSection = dynamic(() => import("@/components/home/process-section"), { 
@@ -67,9 +61,6 @@ const FAQ = dynamic(() => import("@/components/home/faq"), {
 const BlogPreview = dynamic(() => import("@/components/home/blog-preview"), { 
   loading: () => <div className="h-80 bg-muted animate-pulse" />
 });
-const ContactSection = dynamic(() => import("@/components/home/contact-section"), { 
-  loading: () => <div className="h-80 bg-muted animate-pulse" />
-});
 const ComparisonBenefits = dynamic(() => import("@/components/home/comparison-benefits"), { 
   loading: () => <div className="h-80 bg-muted animate-pulse" />
 });
@@ -78,7 +69,6 @@ const FinalCTA = dynamic(() => import("@/components/home/final-cta"), {
 });
 
 const homeFaqs = [
-  // HOMEPAGE CLUSTER — bathroom remodel chandler az
   {
     question: "What types of bathroom remodeling do you offer in Chandler, AZ?",
     answer:
@@ -94,7 +84,6 @@ const homeFaqs = [
     answer:
       "Yes. We are a licensed Arizona contractor serving homeowners across Chandler, Gilbert, Mesa, Tempe, and the East Valley. Every project includes a 2-year workmanship warranty and we pull all required city permits.",
   },
-  // SHOWER CLUSTER — shower remodeling chandler az
   {
     question: "Do you offer shower remodeling in Chandler, AZ?",
     answer:
@@ -105,7 +94,6 @@ const homeFaqs = [
     answer:
       "A shower-only remodel in Chandler typically takes 1–2 weeks. A full shower replacement with custom tile and frameless glass takes 2–3 weeks. We provide a firm written timeline before any work starts.",
   },
-  // BATHTUB CLUSTER — bathtub remodeling chandler az
   {
     question: "Do you offer bathtub remodeling and replacement in Chandler, AZ?",
     answer:
@@ -116,7 +104,6 @@ const homeFaqs = [
     answer:
       "The tub-to-shower conversion is by far the most requested service in Chandler. Most homes built in the 1990s and early 2000s have a garden tub that goes unused. We remove it, waterproof the substrate, and install a modern walk-in shower — adding usable space and strong resale ROI.",
   },
-  // SERVICE AREAS
   {
     question: "What neighborhoods in Chandler do you serve?",
     answer:
@@ -127,8 +114,6 @@ const homeFaqs = [
 export default function HomePage() {
   return (
     <>
-      {/* Deployment test - Check if this appears on live site */}
-      {/* ✅ Deployment workflow test - 2024 */}
       <LocalBusinessSchema />
       <FAQSchema faqs={homeFaqs} />
       <Header />
@@ -138,16 +123,14 @@ export default function HomePage() {
         <AboutPreview />
         <ServicesGrid />
         <WhyChooseUs />
-        <Testimonials />
         <BathroomSection />
-        <GalleryPreview />
         <ProcessSection />
         <ServiceAreas />
         <Financing />
         <ComparisonBenefits />
         <FAQ />
         <BlogPreview />
-        <ContactSection />
+        <ClientWrapper />
         <FinalCTA />
       </main>
       <Footer />

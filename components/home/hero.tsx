@@ -1,8 +1,13 @@
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import Image from "next/image";
 import { Star, Shield, Award, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { QuoteForm } from "@/components/forms/quote-form";
+
+const QuoteForm = dynamic(() => import("@/components/forms/quote-form").then(mod => mod.QuoteForm), {
+  ssr: false,
+  loading: () => <div className="h-[400px] bg-card/50 animate-pulse rounded-xl" />
+});
 
 const trustBadges = [
   { icon: Star, label: "5-Star Rated" },
@@ -14,18 +19,18 @@ const trustBadges = [
 export default function Hero() {
   return (
     <section className="relative min-h-[60vh] flex items-center overflow-hidden pt-36 md:pt-44 lg:pt-52" aria-label="Hero section">
-      {/* Background Image - LCP Optimized */}
+      {/* Background Image - LCP Optimized (142KB) */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/optimized/photo-1552321554-5fefe8c9ef14.webp"
+          src="/images/optimized/photo-1620626011761-996317b8d101.webp"
           alt="Modern master bathroom remodeling project in Chandler AZ"
           fill
           className="object-cover"
           priority={true}
           sizes="100vw"
-          quality={80}
+          quality={85}
           loading="eager"
-          placeholder="empty"
+          fetchPriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/50 to-transparent" aria-hidden="true" />
       </div>
@@ -74,7 +79,7 @@ export default function Hero() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="border-black bg-black text-white hover:border-black/90 hover:bg-black/90 hover:text-white text-base px-8 py-6 focus-visible:outline-2 focus-visible:outline-offset-2"
+                className="border-white/20 bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 text-base px-8 py-6 focus-visible:outline-2 focus-visible:outline-offset-2"
                 aria-label="View our portfolio of completed bathroom remodels"
               >
                 <Link href="/gallery/">View Our Portfolio</Link>
@@ -82,7 +87,7 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right Column - Quote Form */}
+          {/* Right Column - Quote Form - Dynamically Loaded */}
           <div className="lg:block">
             <QuoteForm />
           </div>
