@@ -25,6 +25,7 @@ export default function BathroomSection() {
                 alt="Luxury bathroom remodel featuring walk-in shower in Chandler, Arizona"
                 fill
                 className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
             {/* Floating Stats Card */}

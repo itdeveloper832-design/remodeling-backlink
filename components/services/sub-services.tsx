@@ -54,6 +54,7 @@ export default function SubServices({ title, subtitle, description, services }: 
                     fill
                     className="object-cover"
                     loading="lazy"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                   />
                 </div>
               </div>

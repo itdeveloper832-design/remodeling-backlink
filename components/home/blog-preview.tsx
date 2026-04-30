@@ -82,6 +82,7 @@ export default function BlogPreview() {
                     alt={post.title}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                   <div className="absolute top-4 left-4">
                     <span className="px-3 py-1 text-xs font-medium bg-primary text-primary-foreground rounded-full">

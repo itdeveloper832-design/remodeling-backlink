@@ -94,6 +94,7 @@ export default function Testimonials() {
                     className="object-cover"
                     loading="lazy"
                     quality={75}
+                    sizes="(max-width: 768px) 96px, 128px"
                   />
                 </div>
               </div>
