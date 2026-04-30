@@ -93,10 +93,6 @@ export default function RootLayout({
         {/* Critical performance optimizations - Resource Hints */}
         <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="anonymous" />
         
-        {/* Preconnect to critical domains */}
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://www.google-analytics.com" />
-
         {/* Preload critical LCP image - Fetch Priority for 2024 standards */}
         <link rel="preload" fetchPriority="high" href="/images/optimized/photo-1620626011761-996317b8d101.webp" as="image" type="image/webp" />
 

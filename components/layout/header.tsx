@@ -49,6 +49,7 @@ export function Header() {
               width={816}
               height={280}
               priority
+              fetchPriority="high"
               sizes="(max-width: 640px) 220px, (max-width: 1024px) 300px, 360px"
               className="h-auto w-[220px] sm:w-[260px] md:w-[300px] lg:w-[360px]"
             />

@@ -39,8 +39,7 @@ const nextConfig = {
       '@/lib',
       'lucide-react',
       'framer-motion',
-      'date-fns',
-      'lucide-react'
+      'date-fns'
     ],
   },
 

@@ -1,5 +1,3 @@
-"use client";
-
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import Image from "next/image";
@@ -7,7 +5,6 @@ import { Star, Shield, Award, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const QuoteForm = dynamic(() => import("@/components/forms/quote-form").then(mod => mod.QuoteForm), {
-  ssr: false,
   loading: () => <div className="h-[500px] bg-card/50 animate-pulse rounded-xl" />
 });
 

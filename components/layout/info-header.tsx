@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import { Phone, Mail, Briefcase, Tag } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
