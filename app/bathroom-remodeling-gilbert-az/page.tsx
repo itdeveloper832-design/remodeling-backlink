@@ -5,7 +5,7 @@ import ServiceHero from "@/components/service-hero";
 import ServiceCTA from "@/components/service-cta";
 import { siteConfig } from "@/lib/site-config";
 import { ServiceSchema } from "@/components/seo/json-ld";
-import { GoogleMap } from "@/components/google-map";
+import { GoogleMap } from "@/components/services/google-map";
 
 export const metadata: Metadata = {
   title: "Bathroom Remodeling Gilbert AZ | Expert Contractors",

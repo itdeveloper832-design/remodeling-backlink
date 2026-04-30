@@ -6,7 +6,7 @@ import ServiceCTA from "@/components/service-cta";
 import ServiceFAQ from "@/components/service-faq";
 import Testimonials from "@/components/home/testimonials";
 import ContactSection from "@/components/home/contact-section";
-import { GoogleMap } from "@/components/google-map";
+import { GoogleMap } from "@/components/services/google-map";
 import { siteConfig } from "@/lib/site-config";
 import { ServiceSchema, FAQSchema } from "@/components/seo/json-ld";
 import { serviceContent } from "@/lib/service-content-data";
