@@ -9,6 +9,10 @@ const nextConfig = {
   // Trailing slash ensures static export URLs match canonical tags
   trailingSlash: true,
 
+  // Security & Best Practices
+  poweredByHeader: false,
+  reactStrictMode: true,
+
   // Image Optimization
   images: {
     unoptimized: isExport,

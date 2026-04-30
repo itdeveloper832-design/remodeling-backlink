@@ -72,31 +72,38 @@ export default function ComparisonBenefits() {
             <h3 className="font-serif text-2xl lg:text-3xl font-semibold mb-8 text-foreground text-center">
               DIY vs. Professional Remodeling
             </h3>
-            <div className="space-y-6">
-              <div className="grid grid-cols-3 gap-4 pb-4 border-b border-border text-sm font-bold uppercase tracking-widest text-muted-foreground">
-                <div>Feature</div>
-                <div className="text-center">DIY</div>
-                <div className="text-center">Professional</div>
-              </div>
-              {comparisonData.map((item) => (
-                <div key={item.feature} className="grid grid-cols-3 gap-4 items-center text-sm py-2 border-b border-border/50 last:border-0">
-                  <div className="font-medium text-foreground">{item.feature}</div>
-                  <div className="text-center">
-                    {typeof item.diy === "boolean" ? (
-                      item.diy ? <Check className="w-4 h-4 text-green-500 mx-auto" /> : <X className="w-4 h-4 text-red-500 mx-auto" />
-                    ) : (
-                      <span className="text-muted-foreground">{item.diy}</span>
-                    )}
-                  </div>
-                  <div className="text-center">
-                    {typeof item.pro === "boolean" ? (
-                      item.pro ? <Check className="w-5 h-5 text-primary mx-auto" /> : <X className="w-5 h-5 text-red-500 mx-auto" />
-                    ) : (
-                      <span className="font-semibold text-primary">{item.pro}</span>
-                    )}
-                  </div>
-                </div>
-              ))}
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm text-left">
+                <caption className="sr-only">Comparison of DIY vs Professional Remodeling Features</caption>
+                <thead>
+                  <tr className="border-b border-border text-xs font-bold uppercase tracking-widest text-muted-foreground">
+                    <th scope="col" className="pb-4 font-bold">Feature</th>
+                    <th scope="col" className="pb-4 text-center font-bold">DIY</th>
+                    <th scope="col" className="pb-4 text-center font-bold">Professional</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {comparisonData.map((item) => (
+                    <tr key={item.feature} className="border-b border-border/50 last:border-0">
+                      <td className="py-3 font-medium text-foreground">{item.feature}</td>
+                      <td className="py-3 text-center">
+                        {typeof item.diy === "boolean" ? (
+                          item.diy ? <Check className="w-4 h-4 text-green-500 mx-auto" aria-label="Yes" /> : <X className="w-4 h-4 text-red-500 mx-auto" aria-label="No" />
+                        ) : (
+                          <span className="text-muted-foreground">{item.diy}</span>
+                        )}
+                      </td>
+                      <td className="py-3 text-center">
+                        {typeof item.pro === "boolean" ? (
+                          item.pro ? <Check className="w-5 h-5 text-primary mx-auto" aria-label="Yes" /> : <X className="w-5 h-5 text-red-500 mx-auto" aria-label="No" />
+                        ) : (
+                          <span className="font-semibold text-primary">{item.pro}</span>
+                        )}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
             <p className="mt-8 text-xs text-muted-foreground text-center italic">
               * Based on industry standards and building codes in Chandler, Arizona.

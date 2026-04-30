@@ -9,10 +9,10 @@ export function InfoHeader() {
       aria-label="Top contact information"
     >
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="flex items-center justify-end gap-6">
+        <div className="flex items-center justify-end gap-2 sm:gap-6">
           <a 
             href={`tel:${siteConfig.phone}`}
-            className="flex items-center gap-2 hover:text-primary transition-colors"
+            className="flex items-center gap-2 hover:text-primary transition-colors min-h-[48px] px-2 no-underline"
             aria-label={`Call us at ${siteConfig.phone}`}
           >
             <Phone className="w-4 h-4" aria-hidden="true" />
@@ -21,7 +21,7 @@ export function InfoHeader() {
 
           <a 
             href={`mailto:${siteConfig.email}`}
-            className="flex items-center gap-2 hover:text-primary transition-colors"
+            className="flex items-center gap-2 hover:text-primary transition-colors min-h-[48px] px-2 no-underline"
             aria-label={`Email us at ${siteConfig.email}`}
           >
             <Mail className="w-4 h-4" aria-hidden="true" />
@@ -29,8 +29,8 @@ export function InfoHeader() {
           </a>
           
           <Link 
-            href="/careers"
-            className="flex items-center gap-2 hover:text-primary transition-colors"
+            href="/careers/"
+            className="flex items-center gap-2 hover:text-primary transition-colors min-h-[48px] px-2 no-underline"
             aria-label="View career opportunities"
           >
             <Briefcase className="w-4 h-4" aria-hidden="true" />
@@ -38,8 +38,8 @@ export function InfoHeader() {
           </Link>
           
           <Link 
-            href="/offers"
-            className="flex items-center gap-2 hover:text-primary transition-colors"
+            href="/offers/"
+            className="flex items-center gap-2 hover:text-primary transition-colors min-h-[48px] px-2 no-underline"
             aria-label="View special offers"
           >
             <Tag className="w-4 h-4" aria-hidden="true" />

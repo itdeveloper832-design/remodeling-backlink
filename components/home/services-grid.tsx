@@ -54,7 +54,7 @@ export default function ServicesGrid() {
         {/* See All Services Button */}
         <div className="text-center mt-12 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-500">
           <Link
-            href="/services"
+            href="/services/"
             className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground rounded-full font-semibold hover:bg-primary/90 transition-colors"
           >
             See All Services

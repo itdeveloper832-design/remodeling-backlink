@@ -215,5 +215,61 @@ html {
 .delay-700 { animation-delay: 700ms; }
 .delay-1000 { animation-delay: 1000ms; }
 
+/* ===== ACCESSIBILITY ENHANCEMENTS ===== */
 
+/* Focus visible styles for all interactive elements */
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Ensure links are distinguishable (not only by color) */
+a:not([class*="btn"]):not([class*="Button"]):not(.no-underline) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Links inside prose/content areas must have underlines */
+.prose a,
+section p a,
+footer a:not([aria-label]) {
+  text-underline-offset: 3px;
+}
+
+/* Minimum touch target size (48x48px) for mobile */
+@media (pointer: coarse) {
+  a, button, [role="button"], input, select, textarea, summary {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Skip link styling */
+.sr-only:focus {
+  position: fixed !important;
+  top: 1rem;
+  left: 1rem;
+  z-index: 100;
+  clip: auto !important;
+  width: auto !important;
+  height: auto !important;
+  overflow: visible !important;
+  white-space: nowrap !important;
+}
+
+/* Content visibility optimization for below-fold sections */
+.content-visibility-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 500px;
+}
 

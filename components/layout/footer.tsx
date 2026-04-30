@@ -1,13 +1,11 @@
-"use client";
-
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Twitter, Youtube, Linkedin } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Youtube, Linkedin } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
 
 const GoogleMap = dynamic(() => import("@/components/google-map"), {
   ssr: false,
-  loading: () => <div className="mt-8 h-[150px] bg-background/10 animate-pulse rounded-xl" />
+  loading: () => <div className="mt-8 h-[150px] bg-background/10 animate-pulse rounded-xl" aria-label="Loading map" />,
 });
 
 export function Footer() {
@@ -18,7 +16,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-1">
-            <Link href="/" className="inline-block mb-6 group">
+            <Link href="/" className="inline-block mb-6 group no-underline">
               <span className="font-serif text-3xl font-semibold text-background group-hover:text-primary transition-colors">
                 Chandler
               </span>
@@ -30,13 +28,14 @@ export function Footer() {
               Top-rated bathroom remodeling in Chandler, Arizona. 
               Transforming homes with luxury designs and exceptional craftsmanship since 2008.
             </p>
-            <div className="flex gap-3">
+            <div className="flex gap-3" role="list" aria-label="Social media links">
               <a
                 href={siteConfig.social.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2"
+                className="w-12 h-12 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 no-underline"
                 aria-label="Follow ARZ Home Remodeling on Facebook"
+                role="listitem"
               >
                 <Facebook className="w-5 h-5" aria-hidden="true" />
               </a>
@@ -44,8 +43,9 @@ export function Footer() {
                 href={siteConfig.social.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2"
+                className="w-12 h-12 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 no-underline"
                 aria-label="Follow ARZ Home Remodeling on Instagram"
+                role="listitem"
               >
                 <Instagram className="w-5 h-5" aria-hidden="true" />
               </a>
@@ -53,8 +53,9 @@ export function Footer() {
                 href="https://youtube.com/arzhomeremodeling"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2"
+                className="w-12 h-12 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 no-underline"
                 aria-label="Watch our remodeling projects on YouTube"
+                role="listitem"
               >
                 <Youtube className="w-5 h-5" aria-hidden="true" />
               </a>
@@ -62,8 +63,9 @@ export function Footer() {
                 href="https://linkedin.com/company/arzhomeremodeling"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2"
+                className="w-12 h-12 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 no-underline"
                 aria-label="Connect with ARZ Home Remodeling on LinkedIn"
+                role="listitem"
               >
                 <Linkedin className="w-5 h-5" aria-hidden="true" />
               </a>
@@ -71,13 +73,13 @@ export function Footer() {
           </div>
 
           {/* Services Column */}
-          <div>
+          <nav aria-label="Footer services navigation">
             <h3 className="font-serif text-xl font-semibold mb-6 text-background">Our Services</h3>
             <ul className="space-y-3">
               <li>
                 <Link
                   href="/bathroom-remodeling/"
-                  className="text-background/80 hover:text-primary transition-colors text-sm"
+                  className="text-background/80 hover:text-primary transition-colors text-sm underline decoration-background/30 hover:decoration-primary underline-offset-4 no-underline"
                 >
                   Bathroom Remodeling Chandler AZ
                 </Link>
@@ -85,7 +87,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/shower-remodeling/"
-                  className="text-background/80 hover:text-primary transition-colors text-sm"
+                  className="text-background/80 hover:text-primary transition-colors text-sm underline decoration-background/30 hover:decoration-primary underline-offset-4 no-underline"
                 >
                   Shower Remodeling in Chandler
                 </Link>
@@ -93,7 +95,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/bathtub-remodeling/"
-                  className="text-background/80 hover:text-primary transition-colors text-sm"
+                  className="text-background/80 hover:text-primary transition-colors text-sm underline decoration-background/30 hover:decoration-primary underline-offset-4 no-underline"
                 >
                   Bathtub Remodeling Chandler
                 </Link>
@@ -101,7 +103,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/walk-in-showers/"
-                  className="text-background/80 hover:text-primary transition-colors text-sm"
+                  className="text-background/80 hover:text-primary transition-colors text-sm underline decoration-background/30 hover:decoration-primary underline-offset-4 no-underline"
                 >
                   Walk-in Showers Chandler AZ
                 </Link>
@@ -109,22 +111,22 @@ export function Footer() {
               <li>
                 <Link
                   href="/bathroom-tile-installation/"
-                  className="text-background/80 hover:text-primary transition-colors text-sm"
+                  className="text-background/80 hover:text-primary transition-colors text-sm underline decoration-background/30 hover:decoration-primary underline-offset-4 no-underline"
                 >
                   Bathroom Tile Contractors
                 </Link>
               </li>
             </ul>
-          </div>
+          </nav>
 
           {/* Quick Links Column */}
-          <div>
+          <nav aria-label="Footer quick links">
             <h3 className="font-serif text-xl font-semibold mb-6 text-background">Quick Links</h3>
             <ul className="space-y-3">
               <li>
                 <Link
                   href="/"
-                  className="text-background/80 hover:text-primary transition-colors text-sm"
+                  className="text-background/80 hover:text-primary transition-colors text-sm underline decoration-background/30 hover:decoration-primary underline-offset-4 no-underline"
                 >
                   Bathroom Remodeling in Chandler AZ
                 </Link>
@@ -133,7 +135,7 @@ export function Footer() {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-background/80 hover:text-primary transition-colors text-sm"
+                    className="text-background/80 hover:text-primary transition-colors text-sm underline decoration-background/30 hover:decoration-primary underline-offset-4 no-underline"
                   >
                     {item.name}
                   </Link>
@@ -142,51 +144,55 @@ export function Footer() {
               <li>
                 <Link
                   href="/financing/"
-                  className="text-background/80 hover:text-primary transition-colors text-sm"
+                  className="text-background/80 hover:text-primary transition-colors text-sm underline decoration-background/30 hover:decoration-primary underline-offset-4 no-underline"
                 >
                   Financing Options
                 </Link>
               </li>
             </ul>
-          </div>
+          </nav>
 
           {/* Contact Column */}
           <div>
             <h3 className="font-serif text-xl font-semibold mb-6 text-background">Contact Us</h3>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-primary mt-0.5 shrink-0" />
-                <span className="text-background/80 text-sm leading-relaxed">
-                  {siteConfig.address.full}
-                </span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-primary shrink-0" />
-                <a
-                  href={`tel:${siteConfig.phone}`}
-                  className="text-background/80 hover:text-primary transition-colors text-sm"
-                >
-                  {siteConfig.phone}
-                </a>
-              </li>
-              <li className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-primary shrink-0" />
-                <a
-                  href={`mailto:${siteConfig.email}`}
-                  className="text-background/80 hover:text-primary transition-colors text-sm"
-                >
-                  {siteConfig.email}
-                </a>
-              </li>
-              <li className="flex items-start gap-3">
-                <Clock className="w-5 h-5 text-primary mt-0.5 shrink-0" />
-                <div className="text-background/80 text-sm">
-                  <p>Mon-Fri: {siteConfig.hours.weekdays}</p>
-                  <p>Sat: {siteConfig.hours.saturday}</p>
-                  <p>Sun: {siteConfig.hours.sunday}</p>
-                </div>
-              </li>
-            </ul>
+            <address className="not-italic">
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <MapPin className="w-5 h-5 text-primary mt-0.5 shrink-0" aria-hidden="true" />
+                  <span className="text-background/80 text-sm leading-relaxed">
+                    {siteConfig.address.full}
+                  </span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Phone className="w-5 h-5 text-primary shrink-0" aria-hidden="true" />
+                  <a
+                    href={`tel:${siteConfig.phone}`}
+                    className="text-background/80 hover:text-primary transition-colors text-sm underline decoration-background/30 hover:decoration-primary underline-offset-4 no-underline"
+                    aria-label={`Call us at ${siteConfig.phone}`}
+                  >
+                    {siteConfig.phone}
+                  </a>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Mail className="w-5 h-5 text-primary shrink-0" aria-hidden="true" />
+                  <a
+                    href={`mailto:${siteConfig.email}`}
+                    className="text-background/80 hover:text-primary transition-colors text-sm underline decoration-background/30 hover:decoration-primary underline-offset-4 no-underline"
+                    aria-label={`Email us at ${siteConfig.email}`}
+                  >
+                    {siteConfig.email}
+                  </a>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Clock className="w-5 h-5 text-primary mt-0.5 shrink-0" aria-hidden="true" />
+                  <div className="text-background/80 text-sm">
+                    <p>Mon-Fri: {siteConfig.hours.weekdays}</p>
+                    <p>Sat: {siteConfig.hours.saturday}</p>
+                    <p>Sun: {siteConfig.hours.sunday}</p>
+                  </div>
+                </li>
+              </ul>
+            </address>
             
             {/* Embedded Map - Lazy Loaded */}
             <GoogleMap />
@@ -215,26 +221,26 @@ export function Footer() {
             <p className="text-background/70 text-sm">
               © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
             </p>
-            <div className="flex items-center gap-6">
+            <nav aria-label="Legal links" className="flex items-center gap-6">
               <Link
                 href="/privacy-policy/"
-                className="text-background/70 hover:text-background transition-colors text-sm"
+                className="text-background/70 hover:text-background transition-colors text-sm underline decoration-background/30 hover:decoration-background underline-offset-4 no-underline"
               >
                 Privacy Policy
               </Link>
               <Link
                 href="/terms-of-service/"
-                className="text-background/70 hover:text-background transition-colors text-sm"
+                className="text-background/70 hover:text-background transition-colors text-sm underline decoration-background/30 hover:decoration-background underline-offset-4 no-underline"
               >
                 Terms of Service
               </Link>
               <Link
                 href="/sitemap.xml"
-                className="text-background/70 hover:text-background transition-colors text-sm"
+                className="text-background/70 hover:text-background transition-colors text-sm underline decoration-background/30 hover:decoration-background underline-offset-4 no-underline"
               >
                 Sitemap
               </Link>
-            </div>
+            </nav>
           </div>
         </div>
       </div>

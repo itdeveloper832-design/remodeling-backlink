@@ -28,9 +28,8 @@ export default function AboutPreview() {
               />
               {/* Video Play Button Overlay */}
               <div className="absolute inset-0 bg-foreground/20 flex items-center justify-center">
-                <button className="w-20 h-20 rounded-full bg-primary flex items-center justify-center hover:scale-110 transition-transform">
-                  <Play className="w-8 h-8 text-primary-foreground ml-1" />
-                  <span className="sr-only">Play video about our company</span>
+                <button className="w-20 h-20 rounded-full bg-primary flex items-center justify-center hover:scale-110 transition-transform" aria-label="Play video about our company">
+                  <Play className="w-8 h-8 text-primary-foreground ml-1" aria-hidden="true" />
                 </button>
               </div>
             </div>
@@ -77,7 +76,7 @@ export default function AboutPreview() {
               size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground group"
             >
-              <Link href="/about">
+              <Link href="/about/">
                 Learn More About Us
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
