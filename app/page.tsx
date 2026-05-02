@@ -11,9 +11,9 @@ import GalleryPreview from "@/components/home/gallery-preview";
 import ContactSection from "@/components/home/contact-section";
 
 export const metadata: Metadata = {
-  title: "Bathroom Remodeling Chandler AZ | Licensed Contractors & Free Estimates",
+  title: "Bathroom Remodeling Chandler AZ | Expert Team",
   description:
-    "Licensed bathroom remodeling contractors in Chandler, AZ. Bathroom remodel, shower remodeling, bathtub replacement, and tub-to-shower conversion. Free estimates — call (229) 306-5591.",
+    "Licensed bathroom remodeling contractors in Chandler, AZ. Shower renovations, tub replacements & full remodels. Free quotes: (229) 306-5591.",
   keywords: [
     "bathroom remodel chandler",
     "bathroom remodel chandler az",
@@ -25,9 +25,9 @@ export const metadata: Metadata = {
     "bathroom remodeling contractor phoenix",
   ],
   openGraph: {
-    title: "Bathroom Remodeling Chandler AZ | Licensed Contractors",
+    title: "Bathroom Remodeling Chandler AZ | Expert Team",
     description:
-      "Licensed bathroom remodeling contractors in Chandler, AZ. Bath remodel, shower remodeling, tub replacement. Free estimates!",
+      "Licensed bathroom remodeling contractors in Chandler, AZ. Shower renovations, tub replacements & full remodels. Free quotes: (229) 306-5591.",
     type: "website",
   },
   alternates: {

@@ -346,9 +346,9 @@ const serviceContent: Record<string, ServiceDetail> = {
       finalDescription: "Call now for a same-week consultation and clear pricing on your new shower.",
     },
     seo: {
-      title: "Shower Remodeling Services in Chandler AZ | Local Contractors",
+      title: "Shower Remodeling Chandler AZ | Local Experts",
       description:
-        "Professional shower remodeling services in Chandler, Arizona. Custom tile, frameless glass enclosures, waterproof installations, and premium fixtures from trusted contractors.",
+        "Professional shower remodeling in Chandler. Custom tile, frameless glass, and waterproof installations from trusted local contractors.",
     },
     relatedServices: {
       title: "Related Bathroom Services in Chandler",
@@ -506,9 +506,9 @@ const serviceContent: Record<string, ServiceDetail> = {
       finalDescription: "Call now for fast scheduling and a polished install that's ready to use.",
     },
     seo: {
-      title: "Bathtub Installation Services Chandler AZ | Professional Tub Installers",
+      title: "Bathtub Installation Chandler AZ | Tub Installers",
       description:
-        "Expert bathtub installation services in Chandler, Arizona. Level installs, proper drainage, waterproof sealing, and coordinated trim. Get a free bathtub installation estimate from local contractors.",
+        "Expert bathtub installation in Chandler. Level installs, proper drainage, and waterproof sealing. Get a free bathtub installation estimate.",
     },
     relatedServices: {
       title: "Related Bathroom Services in Chandler",
@@ -666,9 +666,9 @@ const serviceContent: Record<string, ServiceDetail> = {
       finalDescription: "Call now for a fast quote and professional tub replacement scheduling.",
     },
     seo: {
-      title: "Bathtub Replacement Services Chandler AZ | Modern Tub Upgrades",
+      title: "Bathtub Replacement Chandler AZ | Tub Upgrades",
       description:
-        "Professional bathtub replacement services in Chandler, Arizona. Clean removal, updated plumbing, level installs, and fresh finishes from top contractors. Contact us for a fast quote.",
+        "Bathtub replacement in Chandler. Clean removal, updated plumbing, level installs, and fresh finishes from top contractors. Get a fast quote.",
     },
     relatedServices: {
       title: "Related Bathroom Services in Chandler",
@@ -826,9 +826,9 @@ const serviceContent: Record<string, ServiceDetail> = {
       finalDescription: "Call today for a fast walkthrough and tailored walk-in shower estimate.",
     },
     seo: {
-      title: "Walk-in Shower Installation Services Chandler AZ | Local Contractors",
+      title: "Walk-in Shower Installation Chandler AZ",
       description:
-        "Professional walk-in shower installation services in Chandler, Arizona. Curbless and low-threshold showers, slip-resistant tile, glass enclosures, and waterproofing by local contractors.",
+        "Custom walk-in shower installation in Chandler, AZ. Low-threshold entry, slip-resistant floors, and modern frameless glass for a safer bath.",
     },
     relatedServices: {
       title: "Related Bathroom Services in Chandler",
