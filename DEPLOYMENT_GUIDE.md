@@ -33,6 +33,10 @@ FTP_USERNAME: your-cpanel-username
 FTP_PASSWORD: your-cpanel-password
 ```
 
+> [!IMPORTANT]
+> Ensure these secret names match **exactly** in your GitHub repository settings.
+
+
 ### 2. cPanel Configuration
 - **FTP Access:** Enabled
 - **Directory:** `/home/digitalskills/arzhomeremodeling.com/`
@@ -48,8 +52,11 @@ The website is configured to build as **standalone** output:
 
 ```javascript
 // next.config.js
-output: 'standalone'
+output: 'export' // Current method for cPanel static hosting
 ```
+
+This creates an `out/` directory containing all static files.
+
 
 This creates:
 - `.next/standalone/` - Complete application
